@@ -30,15 +30,15 @@ MacPorts is running on PureDarwin 9, potentially giving us thousands of open sou
 
 ![](https://raw.github.com/wiki/PureDarwin/PureDarwin/images/macports_on_pd.jpg)
 
-The screenshot above shows a PureDarwin 9 system created from the scripts in our repository, running on real hardware, using TightVNC and [XFCE](users/xfce.html) from MacPorts.
+The screenshot above shows a PureDarwin 9 system created from the scripts in our repository, running on real hardware, using TightVNC and [XFCE](wiki/Xfce) from MacPorts.
 
-This page shows where we currently are (see the [current blockers</span>](blockers.md)).
+This page shows where we currently are (see the [current blockers</span>](wiki/Current_Blockers)).
 
 As of now, you can either build a PureDarwin system yourself based on the information on this site and our and Apple's Open Source and DarwinBuild source code repositories, or download "[PureDarwin Xmas](downloads/xmas.html)", a developer preview of the operating system based on Apple's Darwin 9 sources and other Open Source projects.
 
 At the same time, the PureDarwin project would like to invite the community to discuss, participate and contribute.
 
-The developer preview is available for download as a pre-configured virtual machine for [VMware](developers/vmware.html) Fusion 2.0 on Macintosh, and the code used to generate it is available in a Subversion/Mercurial repository form.
+The developer preview is available for download as a pre-configured virtual machine for [VMware](wiki/VMware) Fusion 2.0 on Macintosh, and the code used to generate it is available in a Subversion/Mercurial repository form.
 
 A minimal PureDarwin system known as "[PureDarwin nano](downloads/puredarwin-nano.html)" is also available, where only one process is running (a shell).
 Credits
