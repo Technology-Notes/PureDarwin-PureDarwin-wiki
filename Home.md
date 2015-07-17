@@ -10,7 +10,7 @@ Another goal of this project is to provide additional documentation. [More](wik
 
 Documentation and quick hints
 -----------------------------
-Please see the right-hand side navigation bar for wiki documentation. Note that due to the migration of this content from Google Pages to this GitHub Wiki some links might be broken. In this case you should be able to find the correct page in the right-hand side navigation. It would be very kind if you could fix the wiki in this case.
+Please see the right-hand side navigation bar (under "**Pages**") for wiki documentation. Note that due to the migration of this content from Google Pages to this GitHub Wiki some links might be broken. In this case you should be able to find the correct page in the right-hand side navigation. It would be very kind if you could fix the wiki in this case.
 
 See the [Changelog](https://github.com/PureDarwin/PureDarwin/wiki/_history) for recent updates of this Wiki.
 
