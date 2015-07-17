@@ -1,13 +1,16 @@
 BinaryDrivers
 =============
-<span style="font-family:arial,sans-serif"><span style="font-size:small">Apple has been making available certain drivers in binary form under the Apple Binary License. Without these, Darwin in its current form would not be usable (in fact, not even the XNU kernel could boot). </span></span>
-<span style="font-family:arial,sans-serif"><span style="font-size:small">
-</span></span>
-<span style="font-family:arial,sans-serif"><span style="font-size:small">Here is an incomplete list of such drivers. This is for quick reference only, please refer to official Apple documentation for authoritative information.*</span></span>
+
+Apple has been making available certain drivers in binary form under the Apple Binary License. Without these, Darwin in its current form would not be usable (in fact, not even the XNU kernel could boot). 
+
+Here is an incomplete list of such drivers. This is for quick reference only, please refer to official Apple documentation for authoritative information.
+
 ### Darwin 10: MacOSForge
-Status pending...<span style="font-family:arial,sans-serif"><span style="font-size:small">
-</span></span>
+
+Status pending... feel free to edit.
+
 ### Darwin 9: MacOSForge
+
 1.  AppleACPIPlatform.root.tar.gz
 2.  AppleRTC.root.tar.gz
 3.  IOATABlockStorage.root.tar.gz
@@ -15,7 +18,9 @@ Status pending...<span style="font-family:arial,sans-serif"><span style="font-si
 5.  IOSCSIArchitectureModelFamily.root.tar.gz
 6.  efiboot.root.tar.gz
 7.  GraphicsDrivers.root.tar.gz
+
 ### Darwin 8: darwinx86-801.iso
+
 1.  ACard62xxM-4.tar.bz2
 2.  ACard67162-2.tar.bz2
 3.  ACard671xSCSI-4.tar.bz2
@@ -54,7 +59,9 @@ Status pending...<span style="font-family:arial,sans-serif"><span style="font-si
 36. IOSCSIArchitectureModelFamily-140.1.7.tar.bz2
 
 ### Darwin 6: darwinx86-602.iso
-<span style="font-family:arial,sans-serif"><span style="font-size:small">ls /Volumes/Darwinx86/System/Installation/apple_binary</span></span>
+
+`ls /Volumes/Darwinx86/System/Installation/apple_binary`
+
 1.  ACard62xxM.kext.tar.gz
 2.  ACard671xSCSI.kext.tar.gz
 3.  ACard68xxM.kext.tar.gz
