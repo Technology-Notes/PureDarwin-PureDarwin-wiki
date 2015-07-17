@@ -42,6 +42,7 @@ Credits
 We would like to thank
 -   Apple, Inc. for releasing Darwin as Open Source 
 -   kvv and _wms for their continuing help
+-   Adam Baxter for finding a Gold Sponsor to provide a hosted Mac mini from [MacStadium](http://www.macstadium.com)
 -   David Elliott for his work on boot-132
 -   The Chameleon team for their work on boot-132
 -   The xnu-dev team for their work on the XNU kernel
@@ -53,3 +54,10 @@ We would like to thank
 -   The MacPorts project
 -   The folks at #macosforge, #macports, #macdev, #opendarwin, #puredarwin, 
 -   Everyone else contributing to Darwin 
+
+Gold Sponsor
+------------
+
+Special thanks to [MacStadium](http://www.macstadium.com) for sponsoring a hosted Mac mini.
+
+![MacStadium](http://www.macstadium.com/images/macstadium210.png)
