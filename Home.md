@@ -6,7 +6,7 @@ Welcome
 [Darwin](http://en.wikipedia.org/wiki/Darwin_%28operating_system%29) is the Open Source operating system from Apple that forms the basis for Mac OS X, and PureDarwin is a community project to make Darwin more usable (some people think of it as the informal successor to OpenDarwin).
 
 One current goal of this project is to provide a useful bootable ISO of Darwin 10.x and Darwin 9.x.
-Another goal of this project is to provide additional documentation. [More](welcome/about.html)...
+Another goal of this project is to provide additional documentation. [More](wiki/About)...
 
 Documentation and quick hints
 -----------------------------
@@ -29,7 +29,7 @@ The screenshot above shows a PureDarwin 9 system created from the scripts in our
 
 This page shows where we currently are (see the [current blockers</span>](wiki/Current_Blockers)).
 
-As of now, you can either build a PureDarwin system yourself based on the information on this site and our and Apple's Open Source and DarwinBuild source code repositories, or download "[PureDarwin Xmas](downloads/xmas.html)", a developer preview of the operating system based on Apple's Darwin 9 sources and other Open Source projects.
+As of now, you can either build a PureDarwin system yourself based on the information on this site and our and Apple's Open Source and DarwinBuild source code repositories, or download "[PureDarwin Xmas](wiki/Xmas)", a developer preview of the operating system based on Apple's Darwin 9 sources and other Open Source projects.
 
 At the same time, the PureDarwin project would like to invite the community to discuss, participate and contribute.
 
