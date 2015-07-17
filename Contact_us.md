@@ -3,9 +3,5 @@ Contact us
 
 This PureDarwin wiki is a community effort. The PureDarwin [team](https://github.com/PureDarwin/PureDarwin/wiki/Team) can best be reached at 
 
--   contact@puredarwin.org
--   http://groups.google.com/group/puredarwin
+-   (GitHub issues)[https://github.com/PureDarwin/PureDarwin/issues] is the preferred way of communication
 -   #puredarwin on irc.freenode.net
-
-The site administrator can be reached at
--   admin@puredarwin.org
