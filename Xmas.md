@@ -16,8 +16,8 @@ Contents
 5.  [**5** Screenshots](xmas.html#TOC-Screenshots)
 
 ### Download
--   [XZ-compressed TAR archive](http://code.google.com/p/puredarwin/downloads/detail?name=puredarwinxmas.tar.xz) (hosted on Google Code) - SHA-1 checksum:  <span style="font-family:arial,sans-serif;white-space:nowrap">80f88f44cc540ea05aa847bb18b94bdd133b6c07</span>
--   [BZip2-compressed TAR archive](http://xref.puredarwin.org/puredarwinxmas.tar.bz2) (hosted on XRef) - MD5 checksum: fd0ade4da224475e5dc33c2c11d9d0bc
+-   [XZ-compressed TAR archive](http://code.google.com/p/puredarwin/downloads/detail?name=puredarwinxmas.tar.xz) (hosted on Google Code) - SHA-1 checksum: `80f88f44cc540ea05aa847bb18b94bdd133b6c07`
+-   [BZip2-compressed TAR archive](http://xref.puredarwin.org/puredarwinxmas.tar.bz2) (hosted on XRef) - MD5 checksum: `fd0ade4da224475e5dc33c2c11d9d0bc`
 [VMware](wiki/VMware) Fusion 2 virtual machine or [VirtualBox](wiki/VirtualBox)
 
 ### Showcase 
