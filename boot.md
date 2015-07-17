@@ -12,7 +12,7 @@ boot is a series of files that collectively act as bootloader for BIOS-based har
 -   **cdboot** booter for CD-ROMs (only works with valid Extensions.mkext due to a bug)
 -   **chain0** (tbd; probably not used by PureDarwin)
 
-Since Intel-based Macintosh computers use EFI instead of BIOS, they need to use a different bootloader, [efiboot](efiboot.html).
+Since Intel-based Macintosh computers use EFI instead of BIOS, they need to use a different bootloader, [efiboot](https://github.com/PureDarwin/PureDarwin/wiki/efiboot).
 Another alternative to the above two bootloaders, is the new XNU loading support in [grub2](http://www.gnu.org/software/grub/grub-2.en.html), which works on both platforms (EFI and BIOS based) . For more information, check out [this](http://grub.enbug.org/XNUSupport) page.
 
 ### Requirements
@@ -61,13 +61,13 @@ Non-System Disk
 ```
 sh-3.2# fdisk -e /dev/rdisk1
 Enter 'help' for information
-fdisk: 1&gt; f 1
+fdisk: 1> f 1
 Partition 1 marked active.
-fdisk:*1&gt; w
+fdisk:*1> w
 Device could not be accessed exclusively.
 A reboot will be needed for changes to take effect. OK? [n] y
 Writing MBR at offset 0.
-fdisk: 1&gt; q
+fdisk: 1> q
 sh-3.2# 
 ```
 
