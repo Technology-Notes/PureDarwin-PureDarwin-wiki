@@ -29,19 +29,19 @@ Note that `pd_makedmg` currently needs a Mac to run, since it makes use of comma
 ### How pd_makedmg works
 
 Here is what it essentially does:
--   Creates Extensions.mkext from the kexts in the source tree
+-   Creates `Extensions.mkext` from the kexts in the source tree
 -   Makes a temporary ISO that contains the boot-132 files and that has cdboot as its El Torito boot image 
     (this allows BIOS-based machines to boot)
 -   Creates, initializes and mounts a HFS+ disk image (dmg)
 -   "Injects" parts of the temporary El Torito ISO into the dmg using
-    <span style="font-family:courier new">dd if="$ELTORITOISO" of=$rdev skip=64 seek=64 bs=512
-    <span style="font-family:Arial">(Do not actually execute this command. It is ran automatically by the script.)</span></span>
+    `dd if="$ELTORITOISO" of=$rdev skip=64 seek=64 bs=512`
+    (Do not actually execute this command. It is ran automatically by the script.)
 -   Copies the contents of the source tree to the dmg
--   Blesses boot.efi (this allows EFI-based machines to boot)
+-   Blesses `boot.efi` (this allows EFI-based machines to boot)
 
 ### kexts needed for booting from CD-ROM
 
-Following the instructions from above should produce a CD that boots at least to the point "Still waiting for root device...". For the kernel to be able to access the CD, the necessary kexts need to be installed of course. These are, in addition to the [minimal set of kexts](../kexts.html):
+Following the instructions from above should produce a CD that boots at least to the point `Still waiting for root device...`. For the kernel to be able to access the CD, the necessary kexts need to be installed of course. These are, in addition to the [minimal set of kexts](https://github.com/PureDarwin/PureDarwin/wiki/kexts):
 
 -   IOATAPIProtocolTransport.kext
 -   IOCDStorageFamily.kext
