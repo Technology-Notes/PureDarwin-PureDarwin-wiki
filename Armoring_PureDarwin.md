@@ -150,7 +150,7 @@ By default, the list is big, too big:
 </span>
 Knowing what you're doing, you can safely remove more than hundred packages.
 #### hdiutil compression
-[![](../_/rsrc/1223915630717/curious/armoring-puredarwin/xicon.jpg)](armoring-puredarwin/xicon.jpg%3Fattredirects=0)
+[![](https://raw.github.com/wiki/PureDarwin/PureDarwin/images/xicon.jpg)](armoring-puredarwin/xicon.jpg%3Fattredirects=0)
 
 
 > > hdiutil uses the DiskImages framework (FileVault encryption is supported) to manipulate disk images.
@@ -1370,7 +1370,6 @@ etc..
 <span style="font-size:10px"></span>
 ------------------------------------------------------------------------
 <span style="font-size:10px">Initial version on MMVIII VI VIII  2008/06/08</span>
-
 
 
 
