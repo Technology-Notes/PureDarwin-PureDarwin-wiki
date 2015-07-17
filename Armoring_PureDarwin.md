@@ -106,7 +106,7 @@ You can also use setenv, according to your favorite shell.
 Note that the ownership of the session is root.
 ### Command-line tools to securely erase
 #### diskutil
-[![](../_/rsrc/1223915630717/curious/armoring-puredarwin/xicon.jpg)](armoring-puredarwin/xicon.jpg%3Fattredirects=0)
+[![](https://raw.github.com/wiki/PureDarwin/PureDarwin/images/xicon.jpg)](armoring-puredarwin/xicon.jpg%3Fattredirects=0)
 
 > > Securely erase a disk on $DISK
 > > 
@@ -468,7 +468,7 @@ Although in the short getopt:
 
 
 #### Encrypt (and password protect) a folder with hdiutil
-[![](../_/rsrc/1223915630717/curious/armoring-puredarwin/xicon.jpg)](armoring-puredarwin/xicon.jpg%3Fattredirects=0)
+[![](https://raw.github.com/wiki/PureDarwin/PureDarwin/images/xicon.jpg)](armoring-puredarwin/xicon.jpg%3Fattredirects=0)
 
 
 
@@ -480,7 +480,7 @@ Although in the short getopt:
 
 #### 
 #### Decrypt a folder with hdiutil
-[![](../_/rsrc/1223915630717/curious/armoring-puredarwin/xicon.jpg)](armoring-puredarwin/xicon.jpg%3Fattredirects=0)
+[![](https://raw.github.com/wiki/PureDarwin/PureDarwin/images/xicon.jpg)](armoring-puredarwin/xicon.jpg%3Fattredirects=0)
 
 
 
@@ -1027,7 +1027,7 @@ FIXME
 
 ### AFP
 #### Disable Apple File Server
-[![](../_/rsrc/1223915630717/curious/armoring-puredarwin/xicon.jpg)](armoring-puredarwin/xicon.jpg%3Fattredirects=0)
+[![](https://raw.github.com/wiki/PureDarwin/PureDarwin/images/xicon.jpg)](armoring-puredarwin/xicon.jpg%3Fattredirects=0)
 <span style="font-family:courier new">
 </span>
 
@@ -1057,7 +1057,7 @@ FIXME
 <span style="font-family:courier new,monospace">launchctl load -w /System/Library/LaunchDaemons/com.apple.portmap.plist</span>
 <span style="font-family:courier new,monospace">launchctl load -w /System/Library/LaunchDaemons/org.postfix.master.plist</span>
 ### Bonjour
-[![](../_/rsrc/1223915630717/curious/armoring-puredarwin/xicon.jpg)](armoring-puredarwin/xicon.jpg%3Fattredirects=0)
+[![](https://raw.github.com/wiki/PureDarwin/PureDarwin/images/xicon.jpg)](armoring-puredarwin/xicon.jpg%3Fattredirects=0)
 
 
 
@@ -1326,7 +1326,7 @@ FIXME
 <span style="font-family:courier new"><span style="font-family:Arial"></span></span>
 ### Disable Spotlight for a volume and erase its current meta data
 
-[![](../_/rsrc/1223915630717/curious/armoring-puredarwin/xicon.jpg)](armoring-puredarwin/xicon.jpg%3Fattredirects=0) 
+[![](https://raw.github.com/wiki/PureDarwin/PureDarwin/images/xicon.jpg)](armoring-puredarwin/xicon.jpg%3Fattredirects=0) 
 
 
 
@@ -1370,8 +1370,3 @@ etc..
 <span style="font-size:10px"></span>
 ------------------------------------------------------------------------
 <span style="font-size:10px">Initial version on MMVIII VI VIII  2008/06/08</span>
-
-
-
-
-
