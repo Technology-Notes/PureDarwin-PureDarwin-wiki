@@ -2,50 +2,40 @@ CF-Lite
 =======
 This page covers the differences between CoreFoundation as found on Mac OS X ("CF") and CoreFoundation as found on Darwin ("CF-Lite"). 
 
-<div class="sites-embed-align-left-wrapping-off">
-<div class="sites-embed-border-off sites-embed" style="width:250px;">
-<div class="sites-embed-content sites-embed-type-toc">
-<div class="goog-toc sites-embed-toc-maxdepth-6">
-Contents
-1.  [**1** Versions discussed](cf-lite.html#TOC-Versions-discussed)
-2.  [**2** Exported symbols](cf-lite.html#TOC-Exported-symbols)
-    1.  [**2.1** Number of exported symbols](cf-lite.html#TOC-Number-of-exported-symbols)
-    2.  [**2.2** Symbols](cf-lite.html#TOC-Symbols)
-    3.  [**2.3** Missing exported symbols](cf-lite.html#TOC-Missing-exported-symbols)
-    4.  [**2.4** Symbols vanished from CF-Lite](cf-lite.html#TOC-Symbols-vanished-from-CF-Lite)
-
-
 ### Versions discussed
+
 At the time of this writing, the latest CF on Mac OS X is version 6.5.4 (CFBundleVersion 476.15, CFBundleShortVersionString 6.5.4, SourceVersion 4761500).
 
 The latest published CF-Lite source is [CF-476.15.tar.gz](http://src.macosforge.org/Projects/CF-476.15.tar.gz) (CFBundleVersion 476, CFBundleShortVersionString 6.5). A binary root compiled through DarwinBuild is available from <http://src.macosforge.org/Roots/9C31/CF.root.tar.gz>. 
 
-
-An experimental binary root of CF-lite also compiled through DarwinBuild (but includes patches from [9F33pd1.plist](http://code.google.com/p/puredarwin/source/browse/trunk/plists/9F33pd1.plist)) can be found [here](http://code.google.com/p/puredarwin/source/browse/Roots/9F33pd1/CF.root.tar.gz).
+An experimental binary root of CF-lite also compiled through DarwinBuild (but includes patches from [9F33pd1.plist](https://github.com/PureDarwin/PureDarwin/blob/master/plists/9F33pd1.plist)) can be found [here](http://code.google.com/p/puredarwin/source/browse/Roots/9F33pd1/CF.root.tar.gz).
 
 The [PureFoundation](../purefoundation.html) project also provides patched binaries of CFLite. These combine patches necessary to fix some short-comings with CFLite with those needed by the cloned Foundation.framework, and as a result require the presence of that framework.
 
 <span style="text-decoration:underline">Notes:</span> Please, read [Apple CF-lite](http://developer.apple.com/opensource/cflite.html) page for more information.
 
 There is also [OpenCFLite](http://opencflite.svn.sourceforge.net/viewvc/opencflite/), a version of CFLite maintained by an couple of independent developers ([blog](http://lwat.blogspot.com/)) which aims to port it to Windows and Linux. As well as the platform-specific changes, this also includes a number of bug-fixes and feature enhancements. There is a good chance that in the near future the version of CFLite bundled for use with PureFoundation will be based on OpenCFLite rather than directly on Apple's CFLite.
+
 ### Exported symbols
+
 Let's compare the number of symbols exported by CF and CF-Lite with `[nm](cf-lite/nm.html)'.
+
 #### Number of exported symbols
-<span style="font-family:courier new;font-size:12px"> </span>
+
+```
 nm -g CoreFoundation | grep -v  "U " | cut -d " " -f 3 &gt; CF.symbols
 nm -g CoreFoundation | grep -v  "U " | cut -d " " -f 3 &gt; CF-Lite.symbols
 
-
 wc -l CF*.symbols 
-<span style="color:rgb(68,68,68)">    1287 CF-Lite.symbols</span>
-<span style="color:rgb(68,68,68)">    1654 CF.symbols</span>
-
+    1287 CF-Lite.symbols
+    1654 CF.symbols
 
 diff CF.symbols CF-Lite.symbols | grep "^&lt; " |  wc -l
-<span style="color:rgb(68,68,68)">     394</span>
-
+     394
+```
 
 This shows that CF exports 1654 symbols.
+
 The same test with CF-Lite shows that CF-Lite exports 1287 symbols.
 
 Hence, CF-Lite contains about 78% of the symbols of the full CF, and about 22% were stripped away.
@@ -53,6 +43,7 @@ Hence, CF-Lite contains about 78% of the symbols of the full CF, and about 22% w
 It is probably fair to assume that the Darwin sources should either not make use of the 28% of symbols that are missing from CF-Lite, or Apple should release the source for the missing symbols. See [Current Blockers](../blockers.html) for a short list of some of the projects where these missing symbols (and the functions they represent) are causing us problems.
 
 #### Symbols
+
 In this example, _NSInvalidArgumentException should be exported by CF. (Please note: using the latest PureDarwin darwinbuild patch will automatically build a version of CFLite which now exports this and other NS-domain exceptions.)
 <span style="font-family:courier new;font-size:12px">
 </span>
@@ -1093,5 +1084,4 @@ An old CF-Lite, [CoreFoundation-262.tar.gz](http://61.8.0.17/pub1/OpenSource/op
 624. __kCFSystemVersionBuildVersionKey
 625. __kCFSystemVersionProductVersionStringKey
 626. __kCFSystemVersionBuildStringKey
-
 
