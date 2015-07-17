@@ -1,7 +1,7 @@
 Welcome
 =======
 
-![](_/rsrc/1232460621129/welcome/PD-Opennow.jpg%3Fheight=200&width=400)
+![](https://raw.github.com/wiki/PureDarwin/PureDarwin/images/PD-Opennow.jpg)
 
 
 [Darwin](http://en.wikipedia.org/wiki/Darwin_%28operating_system%29) is the Open Source operating system from Apple that forms the basis for Mac OS X, and PureDarwin is a community project to make Darwin more usable (some people think of it as the informal successor to OpenDarwin).
@@ -25,18 +25,14 @@ Additionally, as an interim measure, a [version of PureDarwin Xmas](https://pure
 
 Status
 ------
-<span style="font-size:16px">**<span style="font-size:13px;font-weight:normal"> </span>**</span>
+
 MacPorts is running on PureDarwin 9, potentially giving us thousands of open source software titles.
 
-<div style="display:block;margin-right:auto;text-align:left">
-[![](_/rsrc/1264334178410/welcome/macports_on_pd.jpg%3Fheight=300&width=400)](welcome/macports_on_pd.jpg%3Fattredirects=0)
+![](https://raw.github.com/wiki/PureDarwin/PureDarwin/images/macports_on_pd.jpg)
 
 The screenshot above shows a PureDarwin 9 system created from the scripts in our repository, running on real hardware, using TightVNC and [XFCE](users/xfce.html) from MacPorts.
 
-This page shows where we currently are (see the <span style="font-weight:bold">[<span style="color:rgb(255,0,0)">current blockers</span>](blockers.html)</span>).
-<div style="margin:5px 10px;display:inline;float:right">
-[![](_/rsrc/1229865736668/downloads/xmas/PD-Xmas.jpg%3Fheight=100&width=200)](downloads/xmas.html)
-
+This page shows where we currently are (see the [current blockers</span>](blockers.md)).
 
 As of now, you can either build a PureDarwin system yourself based on the information on this site and our and Apple's Open Source and DarwinBuild source code repositories, or download "[PureDarwin Xmas](downloads/xmas.html)", a developer preview of the operating system based on Apple's Darwin 9 sources and other Open Source projects.
 
