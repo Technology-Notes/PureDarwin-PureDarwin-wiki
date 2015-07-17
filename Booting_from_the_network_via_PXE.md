@@ -21,7 +21,7 @@ Basically, booting PureDarwin over the network involves the following steps:
 8.  Root volume image detects that it is booted via the network and sets up ramdisks etc. as needed (like on Mac OS X network boot)
 You can try this variant by:
 1.  Run Ubuntu 9.10 Live CD (we are using this as the server for now; later we could use PureDarwin as the server)
-2.  wget "http://sites.google.com/a/puredarwin.org/puredarwin/developers/booting/boot/pxe/<span dir="ltr">boot-boot1pxe.bash</span>?attredirects=0&d=1" -O ./<span dir="ltr">boot-boot1pxe.bash</span> ; sudo bash ./<span dir="ltr">boot-boot1pxe.bash</span>
+2.  `wget "http://sites.google.com/a/puredarwin.org/puredarwin/developers/booting/boot/pxe/boot-boot1pxe.bash?attredirects=0&d=1" -O ./ boot-boot1pxe.bash ; sudo bash ./ boot-boot1pxe.bash`
 
 ### Booting PureDarwin via Chameleon via mboot.c32 via pxelinux via PXE
 
