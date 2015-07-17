@@ -2,27 +2,11 @@ Kernel Extensions (KEXTs)
 =========================
 Darwin kernel extensions (KEXT) are modules that provide aditional functionality to the kernel, e.g., in the form of device drivers.
 
-<div class="sites-embed-align-left-wrapping-off">
-<div class="sites-embed-border-off sites-embed sites-embed-full-width" style="width:100%;">
-<div class="sites-embed-content sites-embed-type-toc">
-<div class="goog-toc sites-embed-toc-maxdepth-6">
-Contents
-1.  [**1** Minimal set of kexts needed](kexts.html#TOC-Minimal-set-of-kexts-needed)
-2.  [**2** Installing kexts](kexts.html#TOC-Installing-kexts)
-3.  [**3** Determining kext dependencies](kexts.html#TOC-Determining-kext-dependencies)
-    1.  [**3.1** A visual overview of dependencies](kexts.html#TOC-A-visual-overview-of-dependencies)
-4.  [**4** Extensions.mkext](kexts.html#TOC-Extensions.mkext)
-    1.  [**4.1** Unpack Extensions.mkext](kexts.html#TOC-Unpack-Extensions.mkext)
-5.  [**5** Force cache update](kexts.html#TOC-Force-cache-update)
-6.  [**6** Types of kexts](kexts.html#TOC-Types-of-kexts)
-    1.  [**6.1** Driver KEXTs](kexts.html#TOC-Driver-KEXTs)
-    2.  [**6.2** Family KEXTs](kexts.html#TOC-Family-KEXTs)
-    3.  [**6.3** Filesystem KEXTs](kexts.html#TOC-Filesystem-KEXTs)
-
-
 ### Minimal set of kexts needed
+
 The kernel cannot boot at all (crashes) if there is not at least a certain set of KEXTs present.
 The minimal set of KEXTs required to boot Darwin 9 from USB appears to be:
+
 -   AppleACPIPlatform.kext
 -   AppleAPIC.kext
 -   AppleFileSystemDriver.kext
@@ -37,9 +21,12 @@ The minimal set of KEXTs required to boot Darwin 9 from USB appears to be:
 -   IOUSBFamily.kext
 -   IOUSBMassStorageClass.kext
 -   System.kext
-This should get the system booting from USB (At the very least, it should go beyond the "<span style="font-style:italic">Got boot device</span>" phase, so that no message "<span style="font-style:italic">Still waiting for boot device...</span>" appears).
+
+This should get the system booting from USB (At the very least, it should go beyond the `Got boot device` phase, so that no message `Still waiting for boot device...` appears).
+
 ### Installing kexts
-Copy the KEXT to <span style="font-style:italic">$VOLUME/System/Library/Extensions/</span> and fix permissions (important):
+
+Copy the KEXT to `$VOLUME/System/Library/Extensions/` and fix permissions (important):
 
 <span><span style="font-family:courier new,monospace"><span style="font-size:small">chown -R root:wheel $VOLUME/System/Library/Extensions/</span></span></span>
 <span><span style="font-family:courier new,monospace"><span style="font-size:small">chmod -R 755 $VOLUME/System/Library/Extensions/</span></span></span>
