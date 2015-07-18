@@ -4,6 +4,30 @@ This page is about attempting to run DarwinBuild on a PureDarwin system (consequ
 
 ### Get Darwinbuild
 
+#### Homebrew
+
+As of 2015, Darwinbuild can be installed using Homebrew, however it fails.
+
+```
+brew install --HEAD homebrew/head-only/darwinbuild
+(...)
+==> Installing darwinbuild from homebrew/homebrew-head-only
+==> Cloning http://svn.macosforge.org/repository/darwinbuild/trunk/
+==> Patching
+patching file common.mk
+==> xcodebuild -configuration Release install DSTROOT=/ PREFIX=/usr/local/Cellar/darwinbuild/HEAD SYMROOT=build
+
+The following build commands failed:
+	CompileC build/darwinbuild.build/Release/darwinxref.build/Objects-normal/x86_64/cfutils.o darwinxref/cfutils.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+READ THIS: https://git.io/brew-troubleshooting
+If reporting this issue please do so at (not Homebrew/homebrew):
+  https://github.com/homebrew/homebrew-head-only/issues
+```
+
+This bug is disucssed on https://github.com/Homebrew/homebrew-head-only/issues/152
+
 #### SVN
 
 ```
