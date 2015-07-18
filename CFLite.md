@@ -1,18 +1,18 @@
-CF-Lite
-=======
-This page covers the differences between CoreFoundation as found on Mac OS X ("CF") and CoreFoundation as found on Darwin ("CF-Lite"). 
+CFLite
+======
+This page covers the differences between CoreFoundation as found on Mac OS X ("CF") and CoreFoundation as found on Darwin ("CFLite"). 
 
 ### Versions discussed
 
 At the time of this writing, the latest CF on Mac OS X is version 6.5.4 (CFBundleVersion 476.15, CFBundleShortVersionString 6.5.4, SourceVersion 4761500).
 
-The latest published CF-Lite source is [CF-476.15.tar.gz](http://src.macosforge.org/Projects/CF-476.15.tar.gz) (CFBundleVersion 476, CFBundleShortVersionString 6.5). A binary root compiled through DarwinBuild is available from <http://src.macosforge.org/Roots/9C31/CF.root.tar.gz>. 
+The latest published CFLite source is [CF-476.15.tar.gz](http://src.macosforge.org/Projects/CF-476.15.tar.gz) (CFBundleVersion 476, CFBundleShortVersionString 6.5). A binary root compiled through DarwinBuild is available from <http://src.macosforge.org/Roots/9C31/CF.root.tar.gz>. 
 
-An experimental binary root of CF-lite also compiled through DarwinBuild (but includes patches from [9F33pd1.plist](https://github.com/PureDarwin/PureDarwin/blob/master/plists/9F33pd1.plist)) can be found [here](http://code.google.com/p/puredarwin/source/browse/Roots/9F33pd1/CF.root.tar.gz).
+An experimental binary root of CFLite also compiled through DarwinBuild (but includes patches from [9F33pd1.plist](https://github.com/PureDarwin/PureDarwin/blob/master/plists/9F33pd1.plist)) can be found [here](http://code.google.com/p/puredarwin/source/browse/Roots/9F33pd1/CF.root.tar.gz).
 
 The [PureFoundation](../purefoundation.html) project also provides patched binaries of CFLite. These combine patches necessary to fix some short-comings with CFLite with those needed by the cloned Foundation.framework, and as a result require the presence of that framework.
 
-<span style="text-decoration:underline">Notes:</span> Please, read [Apple CF-lite](http://developer.apple.com/opensource/cflite.html) page for more information.
+<span style="text-decoration:underline">Notes:</span> Please, read [Apple CFLite](http://developer.apple.com/opensource/cflite.html) page for more information.
 
 There is also [OpenCFLite](http://opencflite.svn.sourceforge.net/viewvc/opencflite/), a version of CFLite maintained by an couple of independent developers ([blog](http://lwat.blogspot.com/)) which aims to port it to Windows and Linux. As well as the platform-specific changes, this also includes a number of bug-fixes and feature enhancements. There is a good chance that in the near future the version of CFLite bundled for use with PureFoundation will be based on OpenCFLite rather than directly on Apple's CFLite.
 
