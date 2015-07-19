@@ -2,7 +2,7 @@ Netatalk
 ========
 
 <div style="display:inline;float:right;margin-top:5px;margin-right:10px;margin-bottom:5px;margin-left:10px">
-[![](../_/rsrc/1263721308153/users/netatalk/netatalk.png)](netatalk/netatalk.png%3Fattredirects=0)
+[![](https://raw.github.com/wiki/PureDarwin/PureDarwin/imagesnetatalk.png)](netatalk/netatalk.png%3Fattredirects=0)
 Mac OS X comes with a Apple File Protocol (AFP) server which is closed source and unavailable for PureDarwin. Hence, if you would like to use PureDarwin as a file, print and time server for Macintosh computers, you need to use netatalk, a third-party, open source implementation of the AppleTalk suite of protocols. It allows PureDarwin to act as an AFP server and can act as a Time Machine server similar to Apple's Time Capsule. This page describes how to install and configure netatalk on PureDarwin.
 
 <div class="sites-embed-align-left-wrapping-off">
@@ -49,7 +49,7 @@ Announcing to Bonjour (mDNSResponder)
 -------------------------------------
 This section is about announcing the server on the local network, so that it shows up in the Finder:
 
-[![](../_/rsrc/1263693560135/users/netatalk/Bildschirmfoto%202010-01-17%20um%2002.58.49.png)](netatalk/Bildschirmfoto%202010-01-17%20um%2002.58.49.png%3Fattredirects=0)
+[![](https://raw.github.com/wiki/PureDarwin/PureDarwin/images/Bildschirmfoto%202010-01-17%20um%2002.58.49.png)](netatalk/Bildschirmfoto%202010-01-17%20um%2002.58.49.png%3Fattredirects=0)
 
 [](netatalk/Bildschirmfoto%202010-01-17%20um%2002.58.49.png%3Fattredirects=0)On the Mac, the AppleFileServer is launched and announced on the local network via [Bonjour](bonjour.html) using the following LaunchDaemons plist file. We would like to do the same with netatalk, but we are running into problems...
 
