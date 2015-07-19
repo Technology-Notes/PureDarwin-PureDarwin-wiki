@@ -2,7 +2,7 @@ Netatalk
 ========
 
 <div style="display:inline;float:right;margin-top:5px;margin-right:10px;margin-bottom:5px;margin-left:10px">
-[![](https://raw.github.com/wiki/PureDarwin/PureDarwin/imagesnetatalk.png)](netatalk/netatalk.png%3Fattredirects=0)
+[![](https://raw.github.com/wiki/PureDarwin/PureDarwin/images/netatalk.png)](netatalk/netatalk.png%3Fattredirects=0)
 Mac OS X comes with a Apple File Protocol (AFP) server which is closed source and unavailable for PureDarwin. Hence, if you would like to use PureDarwin as a file, print and time server for Macintosh computers, you need to use netatalk, a third-party, open source implementation of the AppleTalk suite of protocols. It allows PureDarwin to act as an AFP server and can act as a Time Machine server similar to Apple's Time Capsule. This page describes how to install and configure netatalk on PureDarwin.
 
 <div class="sites-embed-align-left-wrapping-off">
@@ -17,8 +17,10 @@ Contents
 Installing netatalk on PureDarwin
 ---------------------------------
 netatalk can be installed from MacPorts. Execute the following command to start it, and to cause it to launch at startup:
-<span style="font-size:small">sudo launchctl load -w /Library/LaunchDaemons/org.macports.netatalk.plist</span>
-This, among other things, launches <span style="font-size:small">/opt/local/sbin/afpd</span>, which is netatalk's AFP server.
+
+```sudo launchctl load -w /Library/LaunchDaemons/org.macports.netatalk.plist```
+
+This, among other things, launches ```/opt/local/sbin/afpd```, which is netatalk's AFP server.
 From this moment on, you should be able to connect to your server from any mac using afp://servername or afp://0.0.0.0 (using your server's IP adress). 
 Configuring netatalk
 --------------------
@@ -92,30 +94,34 @@ This section is about announcing the server on the local network, so that it sho
 <span style="font-size:small">&lt;/dict&gt;</span>
 <span style="font-size:small">&lt;/plist&gt;</span>
 
-This tells launchd to announce the AFP server on the local network with Bonjour and launch the AFP server whenever the "afpovertcp" port is accessed. The file <span style="font-size:small">/etc/services</span> contains the definition that this equals port 548. 
+This tells launchd to announce the AFP server on the local network with Bonjour and launch the AFP server whenever the "afpovertcp" port is accessed. The file ```/etc/services``` contains the definition that this equals port 548. 
 
 If we copy the bold part from above into the netatalk LaunchDaemon plist, then netatalk gets announced on the local network as a server (i.e., it shows up automatically on the left-hand side in Finder), but we get
-<span style="font-size:small">E:AFPDaemon: main: dsi_init: Address already in use</span>
+```E:AFPDaemon: main: dsi_init: Address already in use```
 in the syslog and cannot connect to the server because afpd can't start.
 
 Please let us know what to do. <span style="color:rgb(0,0,0)">See MacPorts [#23315](https://trac.macports.org/ticket/23315). According to the maintainer, this has been discussed upstream. As of January 2010, there is a proposal for a possible solution, which might be included in some future Netatalk release.</span>
 
-As a workaround, you can edit /opt/local/etc/netatalk/initscript so that it starts and stops dns-sd. While this is not elegant, it does work at least. Insert the three bold lines into /opt/local/etc/netatalk/initscript:
+As a workaround, you can edit ```/opt/local/etc/netatalk/initscript``` so that it starts and stops dns-sd. While this is not elegant, it does work at least. Insert the three bold lines into ```/opt/local/etc/netatalk/initscript```:
 
 
-<span style="font-size:small">"$PREFIX/sbin/afpd" $AFPD_UAMLIST -g $AFPD_GUEST -c $AFPD_MAX_CLIENTS </span>
-<span style="font-size:small">**dns-sd -R . _afpovertcp._tcp . 548 &**</span>
-<span style="font-size:small">printf " Done.n"</span>
-<span style="font-size:small">(â€¦)</span>
-<span style="font-size:small">    kill $CNID_PID</span>
-<span style="font-size:small">**DNS_SD_PID=`ps aux | grep -v awk | awk '/^root.*afpovertcp/ {print $2}'`**</span>
-<span style="font-size:small">**    kill DNS_SD_PID**</span>
-<span style="font-size:small">fi</span>
+```"$PREFIX/sbin/afpd" $AFPD_UAMLIST -g $AFPD_GUEST -c $AFPD_MAX_CLIENTS```
 
+```**dns-sd -R . _afpovertcp._tcp . 548 &**```
 
-Reload with
-<span style="font-size:small">sudo launchctl unload -w /Library/LaunchDaemons/org.macports.netatalk.plist</span>
-<span style="font-size:small">sudo launchctl load -w /Library/LaunchDaemons/org.macports.netatalk.plist</span>
+```printf " Done.n"```
+
+```    kill $CNID_PID```
+
+```**DNS_SD_PID=`ps aux | grep -v awk | awk '/^root.*afpovertcp/ {print $2}'**```
+
+```**    kill DNS_SD_PID**```
+
+```fi```
+
+Reload with:
+```sudo launchctl unload -w /Library/LaunchDaemons/org.macports.netatalk.plist```
+```sudo launchctl load -w /Library/LaunchDaemons/org.macports.netatalk.plist```
 
 Now you should see your PureDarwin server in the Finder of the Macs in your local network and should be able to connect and log in using the server username and password.
 
