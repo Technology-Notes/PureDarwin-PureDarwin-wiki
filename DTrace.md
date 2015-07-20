@@ -1,13 +1,9 @@
 DTrace
 ======
 
-This page is about the DTrace facility in "<span style="font-style:italic">Darwin-land</span>".
+This page is about the DTrace facility in _"Darwin-land"_.
 
-<div class="sites-embed-align-left-wrapping-off">
-<div class="sites-embed-border-off sites-embed" style="width:350px;">
-<div class="sites-embed-content sites-embed-type-toc">
-<div class="goog-toc sites-embed-toc-maxdepth-6">
-Contents
+# Contents
 1.  [**1** What is DTrace?](dtrace.html#TOC-What-is-DTrace-)
     1.  [**1.1** Pros](dtrace.html#TOC-Pros)
     2.  [**1.2** Cons](dtrace.html#TOC-Cons)
