@@ -33,12 +33,12 @@ This page is about the DTrace facility in _"Darwin-land"_.
 
 What is DTrace?
 -----------------
-<span><span style="font-size:small"><span style="font-family:courier new,monospace">The dtrace command is a generic front-end to the DTrace facility.   The </span></span></span>
-<span style="font-size:small"><span style="font-family:courier new,monospace">command  implements  a  simple  interface to invoke the D language com-</span></span>
-<span style="font-size:small"><span style="font-family:courier new,monospace">piler, the ability to retrieve buffered trace data from the DTrace ker-</span></span>
-<span style="font-size:small"><span style="font-family:courier new,monospace">nel  facility,  and  a set of basic routines to format and print traced</span></span>
-<span style="font-size:small"><span style="font-family:courier new,monospace">data.</span></span><span style="font-size:small"> said `<span>man dtrace</span>'.
-</span>
+```The dtrace command is a generic front-end to the DTrace facility.   The ```
+```command  implements  a  simple  interface to invoke the D language com-```
+```piler, the ability to retrieve buffered trace data from the DTrace ker-```
+```nel  facility,  and  a set of basic routines to format and print traced```
+```data.``` said "man dtrace".
+
 Simply, DTrace is
 -   a dynamic debugger and analysis tool (first appeared in Solaris 10 and OpenSolaris, then in Mac OS X 10.5)
 -   a D programming language interpreter 
@@ -47,12 +47,13 @@ Simply, DTrace is
 -   a process, library, user function, (some) kernel function, the operating system (itself) inspector tool 
 -   a bug finder
 -   scalable 
+
 DTrace may also be used as (or be a part of) 
 -   a malware investigation tool 
 -   a process deciphering tool 
 -   a Troubleshooting software bugs 
 -   a partial intrusion detection system 
--   an educative software (in order to explorer and understand how this operating system work)
+-   an educative software (in order to explore, and understand how this operating system works)
 <span style="text-decoration:underline">Notes:</span><span style="font-size:small"> Although PureDarwin is focused on i386, DTrace supports most of common architectures (</span><span style="font-family:courier new,monospace"><span style="font-size:small">-arch i386|x86_64|ppc|ppc64</span></span><span style="font-size:small">).</span>
 In Mac OS X 10.5, Instruments.app found in developer tools is another front-end to the DTrace facility.
 <span style="text-decoration:underline"><span style="font-size:small">Warning:</span></span><span style="font-size:small"> If the operating system becomes too busy or if you attempt to trace too many events (ie: all function entry related to the kernel), DTrace can drop events and even abort tracing and execution. Consequently, security auditing with DTrace is impacted and more,<span style="font-family:Helvetica"> system() action is not synchronous (so unreliable for security purpose).</span></span>
