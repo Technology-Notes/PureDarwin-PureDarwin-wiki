@@ -1,20 +1,14 @@
 Compatible Hardware
 ===================
-This page will list (non exhaustively) the hardware which is known to successfully run PureDarwin.
-<div class="sites-embed-align-left-wrapping-off">
-<div class="sites-embed-border-off sites-embed" style="width:250px;">
-<div class="sites-embed-content sites-embed-type-toc">
-<div class="goog-toc sites-embed-toc-maxdepth-6">
-Contents
-1.  [**1** Virtual](compatible-hardware.html#TOC-Virtual)
-2.  [**2** Physical](compatible-hardware.html#TOC-Physical)
+
 
 Virtual
 -------
+
 Pseudo-legend:
 *Host*
 *Soft version x.y.z (+ info(s))
-*
+
 -   *cpu + info(s)*
 Apple Mac OS X (Snow) Leopard
 [QEMU](../developers/qemu.html) &gt; v0.9.0
@@ -34,8 +28,11 @@ kvm (Ubuntu 8.10)
 VMware Player 2.5 (Ubuntu, Fedora 8, OpenSuse 64 bits)
 VMware Server 2.0.0 (SMP x86_64) via VMware Infrastructure Web Access
 -   Dual Core AMD Opteron(tm) Processor 180 (Sun Fire(TM) X2100)
+
+
 Physical
 --------
+
 -   Apple MacBook2,1 (Intel Core 2 Duo 2.16Ghz)
 -   Apple MacBookPro3,1
 -   ? ich7m, T7200, 945pm

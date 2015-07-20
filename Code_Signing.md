@@ -1,32 +1,20 @@
 Code Signing
 ============
+
 This page is about binary signature.
-
-<div class="sites-embed-align-left-wrapping-off">
-<div class="sites-embed-border-off sites-embed" style="width:250px;">
-<div class="sites-embed-content sites-embed-type-toc">
-<div class="goog-toc sites-embed-toc-maxdepth-6">
-Contents
-1.  [**1** Background](code-signing.html#TOC-Background)
-2.  [**2** I've got a binary, is it signed?](code-signing.html#TOC-I-ve-got-a-binary-is-it-signed-)
-    1.  [**2.1** The otool Way](code-signing.html#TOC-The-otool-Way)
-    2.  [**2.2** Other ways](code-signing.html#TOC-Other-ways)
-    3.  [**2.3** Examples on Mac OS X](code-signing.html#TOC-Examples-on-Mac-OS-X)
-        1.  [**2.3.1** Inspecting otool](code-signing.html#TOC-Inspecting-otool)
-        2.  [**2.3.2** Verifying the dynamic validity of a process](code-signing.html#TOC-Verifying-the-dynamic-validity-of-a-process)
-3.  [**3** Miscellaneous](code-signing.html#TOC-Miscellaneous)
-4.  [**4** Resources](code-signing.html#TOC-Resources)
-
 
 Background
 ----------
 As of Mac OS X and Darwin, a Mach-O code signature system (similar in concept to Microsoft AuthentiCode for PE binaries on Windows, and Solaris ELF signing) has been implemented. At least on Darwin, this system is not "formally" used, and no binaries are signed.
 
 On Mac OS X, the code signature system forms part of the basis of the "Seatbelt" GPC (Granular Process Control)/RBAC (Role Based Access Control) mechanism (an implementation detail of the Parental Control feature), and most binaries shipped are signed.
+
 I've got a binary, is it signed?
 --------------------------------
 There are probably many ways of checking if a binary is signed on Darwin (although some techniques could also be possible on other operating systems), and Mac OS X ships with tools for checking code signatures.
+
 ### The otool Way
+
 On Darwin, you can quickly check for the presence of a code signature with <span style="font-size:small">otool -l /YourBinaryOfChoice</span><span style="font-family:courier new,monospace"><span style="font-size:small"> | grep LC_CODE_SIGNATURE</span></span>. You're looking for the "<span style="font-size:small">cmd LC_CODE_SIGNATURE</span><span style="font-family:arial,sans-serif">"</span> line (regardless of whether or not you decided to <span style="font-style:italic">grep</span>).
  Without grepping, output similar to the following is produced:
 
