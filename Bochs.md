@@ -1,5 +1,4 @@
-Bochs, the Open Source IA-32 emulation project
-==============================================
+# Bochs
 
 This page still needs to be converted from https://sites.google.com/a/puredarwin.org/puredarwin/developers/bochs
 

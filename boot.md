@@ -4,6 +4,7 @@ The boot project contains the bootloader that is used to boot the system on gene
 
 ### What is boot
 boot is a series of files that collectively act as bootloader for BIOS-based hardware.
+
 -   **boot** (sometimes referred to as "boot2") [HFS+ startup file](http://developer.apple.com/technotes/tn/tn1150.html#StartupFile), lives in the HFS+ file system structure (not a regular file). (Could also be used as a regular file; using a special version of boot1h that would no longer need it to be HFS+ the startup file.)
 -   **[Master Boot Record](http://en.wikipedia.org/wiki/Master_boot_record)** (MBR), lives in the first 440 bytes of the disk (not identical to the MBR from other OSes)
 -   **boot1h** stage 1 booter (bootsector) for HFS+ partitions, lives in the first 512 bytes of the partition
