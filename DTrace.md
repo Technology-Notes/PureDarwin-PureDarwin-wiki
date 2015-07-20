@@ -85,7 +85,7 @@ Examples
 3.  <span style="font-family:Helvetica">In the second terminal, run the command that you want to inspect</span>
 <span style="font-family:Helvetica">In the first terminal, you will see the files that are tried to be opened but fail to open (e.g., ENOENT).</span>
 ### 
-### A *clichÃ©* example: "Hello world!"
+### A *clich©* example: "Hello world!"
 <span style="font-size:small"></span>
 #### Inline
 <span style="font-size:small"><span style="font-family:courier new,monospace">dtrace -n "BEGIN { trace("Hello World!"); exit(0);}"</span></span>
