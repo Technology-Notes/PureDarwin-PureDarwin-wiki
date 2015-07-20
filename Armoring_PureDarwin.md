@@ -9,7 +9,7 @@ Preamble
 <span style="font-style:italic">"Know your enemy"</span> - Rage Against the Machine
 
 <span style="font-size:18px;font-weight:bold">Dictionary</span>
-<span style="font-weight:bold">hard</span> â€¢ <span style="font-weight:bold">en</span> |ËˆhÃ¤rdn|
+<span style="font-weight:bold">hard</span> • <span style="font-weight:bold">en</span> |ˈhärdn|
 
 verb
 make or become hard or harder : [ intrans. ] <span style="font-style:italic">wait for the glue to harden</span> | [ trans. ]<span style="font-style:italic"> bricks that seem to have been hardened by firing</span>.
