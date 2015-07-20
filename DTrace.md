@@ -4,10 +4,10 @@ DTrace
 This page is about the DTrace facility in _"Darwin-land"_.
 
 # Contents
-1.  [**1** What is DTrace?](dtrace.html#TOC-What-is-DTrace-)
-    1.  [**1.1** Pros](dtrace.html#TOC-Pros)
-    2.  [**1.2** Cons](dtrace.html#TOC-Cons)
-2.  [**2** Examples](dtrace.html#TOC-Examples)
+1.  [**1** What is DTrace?](#whatisdtrace)
+    1.  [**1.1** Pros](#pros)
+    2.  [**1.2** Cons](#cons)
+2.  [**2** Examples](#examples)
     1.  [**2.1** A real world example: show missing files](dtrace.html#TOC-A-real-world-example:-show-missing-files)
     2.  [**2.2** A _cliché_ example: "Hello world!"](dtrace.html#TOC-A-clich-example:-Hello-world-)
         1.  [**2.2.1** Inline](dtrace.html#TOC-Inline)
