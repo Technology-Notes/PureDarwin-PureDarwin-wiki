@@ -77,18 +77,22 @@ In Mac OS X 10.5, Instruments.app found in developer tools is another front
     Consequently, not really suited for security auditing, because DTrace may drop events if the system is really busy or simply (but dramatically in this case) abort.</span>
 -   <span style="font-family:Helvetica">Need to be run as root (not sure it should belong to "cons" part).</span>
 <span style="font-size:small"></span>
+
 Examples
 --------
+
 ### A real world example: show missing files
+
 <span style="font-size:13px">On Linux systems, "strace -eopen -f ... 2&gt;&1 | grep ENOENT" can be used to see which files a process tries to open. Using dtrace, the equivalent is:</span>
 1.  Open two terminals
 2.  In the first terminal, run:
     <span><span style="font-family:courier new,monospace"><span style="font-size:small">opensnoop -ex</span></span></span>
 3.  <span style="font-family:Helvetica">In the second terminal, run the command that you want to inspect</span>
 <span style="font-family:Helvetica">In the first terminal, you will see the files that are tried to be opened but fail to open (e.g., ENOENT).</span>
-### 
-### A *clich©* example: "Hello world!"
+
+### A _cliché_ example: "Hello world!"
 <span style="font-size:small"></span>
+
 #### Inline
 <span style="font-size:small"><span style="font-family:courier new,monospace">dtrace -n "BEGIN { trace("Hello World!"); exit(0);}"</span></span>
 <span style="font-size:small"><span style="font-family:courier new,monospace"><span><span style="color:rgb(68,68,68)">dtrace: description 'BEGIN ' matched 1 probe</span></span></span></span>
