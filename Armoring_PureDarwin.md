@@ -13,10 +13,10 @@ Dictionary
 **hard** • <span style="font-weight:bold">en</span> |ˈhärdn|
 
 verb
-make or become hard or harder : [ intrans. ] <span style="font-style:italic">wait for the glue to harden</span> | [ trans. ]<span style="font-style:italic"> bricks that seem to have been hardened by firing</span>.
--   make or become more severe and less sympathetic : [ trans. ] <span style="font-style:italic">she hardened her heart</span>.
--   make or become tougher and more clearly defined : [ intrans. ] <span style="font-style:italic">suspicion hardened into certainty</span>.
--   [ intrans. ] (of prices of stocks, commodities, etc.) <span style="font-style:italic">rise and remain steady at a higher level</span>.
+make or become hard or harder : [ intrans. ] _wait for the glue to harden_ | [ trans. ]_ bricks that seem to have been hardened by firing_.
+-   make or become more severe and less sympathetic : [ trans. ] _she hardened her heart_.
+-   make or become tougher and more clearly defined : [ intrans. ] _suspicion hardened into certainty_.
+-   [ intrans. ] (of prices of stocks, commodities, etc.) _rise and remain steady at a higher level_.
 ### Disclaimer
 <span style="color:rgb(255,0,0)"><span style="background-color:rgb(255,0,0)"><span style="color:rgb(0,0,0)"><span style="font-weight:bold"> WARNING! </span></span></span><span style="font-weight:bold"> YOU HAVE BEEN WARNED! NOW HOPE YOU KNOW WHAT YOU DO! <span style="background-color:rgb(255,0,0)"><span style="color:rgb(0,0,0)"> WARNING! </span></span></span></span>
 <span style="font-weight:bold">
