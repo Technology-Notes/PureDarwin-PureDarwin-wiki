@@ -17,7 +17,8 @@ make or become hard or harder : [ intrans. ] _wait for the glue to harden_ | [ t
 -   make or become more severe and less sympathetic : [ trans. ] _she hardened her heart_.
 -   make or become tougher and more clearly defined : [ intrans. ] _suspicion hardened into certainty_.
 -   [ intrans. ] (of prices of stocks, commodities, etc.) _rise and remain steady at a higher level_.
-### Disclaimer
+
+## Disclaimer
 <span style="color:rgb(255,0,0)"><span style="background-color:rgb(255,0,0)"><span style="color:rgb(0,0,0)"><span style="font-weight:bold"> WARNING! </span></span></span><span style="font-weight:bold"> YOU HAVE BEEN WARNED! NOW HOPE YOU KNOW WHAT YOU DO! <span style="background-color:rgb(255,0,0)"><span style="color:rgb(0,0,0)"> WARNING! </span></span></span></span>
 <span style="font-weight:bold">
 </span>
