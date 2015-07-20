@@ -9,7 +9,7 @@ This page is about the DTrace facility in _"Darwin-land"_.
     2.  [**1.2** Cons](dtrace.html#TOC-Cons)
 2.  [**2** Examples](dtrace.html#TOC-Examples)
     1.  [**2.1** A real world example: show missing files](dtrace.html#TOC-A-real-world-example:-show-missing-files)
-    2.  [**2.2** A clichÃ© example: "Hello world!"](dtrace.html#TOC-A-clich-example:-Hello-world-)
+    2.  [**2.2** A _cliché_ example: "Hello world!"](dtrace.html#TOC-A-clich-example:-Hello-world-)
         1.  [**2.2.1** Inline](dtrace.html#TOC-Inline)
         2.  [**2.2.2** In a file](dtrace.html#TOC-In-a-file)
     3.  [**2.3** Detect new process (successfully started)](dtrace.html#TOC-Detect-new-process-successfully-started-)
@@ -302,4 +302,3 @@ References
 <span style="font-size:small">Glenn Brunette & Jon Haslam. <span style="font-style:italic">Enhancing Security Awareness with DTrace</span>, Sun Microsystems, 2006.</span>
 <span style="font-size:small"><span style="font-style:italic">How To Use DTrace.</span> <http://www.sun.com/software/solaris/howtoguides/dtracehowto.jsp>, Sun Microsystems, 2005.</span>
 <span style="font-size:small"><span style="font-style:italic">Solaris Dynamic Tracing Guide.</span> <http://docs.sun.com/app/docs/doc/817-6223>, Sun Microsystems, 2005.</span>
-
