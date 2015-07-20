@@ -6,10 +6,11 @@ This page describes some ways to hardening PureDarwin (and intrinsically Darwin 
 
 Preamble
 --------
-<span style="font-style:italic">"Know your enemy"</span> - Rage Against the Machine
+_"Know your enemy"_ - Rage Against the Machine
 
-<span style="font-size:18px;font-weight:bold">Dictionary</span>
-<span style="font-weight:bold">hard</span> • <span style="font-weight:bold">en</span> |ˈhärdn|
+Dictionary
+--------
+**hard** • <span style="font-weight:bold">en</span> |ˈhärdn|
 
 verb
 make or become hard or harder : [ intrans. ] <span style="font-style:italic">wait for the glue to harden</span> | [ trans. ]<span style="font-style:italic"> bricks that seem to have been hardened by firing</span>.
