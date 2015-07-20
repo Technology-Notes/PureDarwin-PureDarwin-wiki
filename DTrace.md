@@ -33,13 +33,16 @@ This page is about the DTrace facility in _"Darwin-land"_.
 
 What is DTrace?
 -----------------
-```The dtrace command is a generic front-end to the DTrace facility.   The ```
-```command  implements  a  simple  interface to invoke the D language com-```
-```piler, the ability to retrieve buffered trace data from the DTrace ker-```
-```nel  facility,  and  a set of basic routines to format and print traced```
-```data.``` said "man dtrace".
+According to ```man dtrace```\:
 
-Simply, DTrace is
+    The dtrace command is a generic front-end to the DTrace facility. The 
+    command  implements  a  simple  interface to invoke the D language com-
+    piler, the ability to retrieve buffered trace data from the DTrace ker-
+    nel  facility,  and  a set of basic routines to format and print traced
+    data.
+
+Simply, DTrace is:
+
 -   a dynamic debugger and analysis tool (first appeared in Solaris 10 and OpenSolaris, then in Mac OS X 10.5)
 -   a D programming language interpreter 
 -   a monitoring tool (ie: Observing devices, such as disk or network activity) 
@@ -57,6 +60,7 @@ DTrace may also be used as (or be a part of) 
 <span style="text-decoration:underline">Notes:</span><span style="font-size:small"> Although PureDarwin is focused on i386, DTrace supports most of common architectures (</span><span style="font-family:courier new,monospace"><span style="font-size:small">-arch i386|x86_64|ppc|ppc64</span></span><span style="font-size:small">).</span>
 In Mac OS X 10.5, Instruments.app found in developer tools is another front-end to the DTrace facility.
 <span style="text-decoration:underline"><span style="font-size:small">Warning:</span></span><span style="font-size:small"> If the operating system becomes too busy or if you attempt to trace too many events (ie: all function entry related to the kernel), DTrace can drop events and even abort tracing and execution. Consequently, security auditing with DTrace is impacted and more,<span style="font-family:Helvetica"> system() action is not synchronous (so unreliable for security purpose).</span></span>
+
 ### Pros
 -   <span style="font-size:13px">Every process, or specific processes, can be traced "simultaneously".</span>
 -   <span style="font-size:13px">Output is fully flexible.</span>
@@ -64,8 +68,9 @@ In Mac OS X 10.5, Instruments.app found in developer tools is another front
 -   <span style="font-size:13px">Minimum performance impact when used smartly.</span>
 -   <span style="font-size:13px">No need to restart anything in order to trace.</span>
 -   <span style="font-size:13px">Relatively safe.</span>
+
 ### Cons
-<span style="font-size:small"></span>
+
 -   Partially supported (around 20K probes available instead of 60K) on Darwin (<span style="font-size:12px;font-family:Helvetica"><span style="font-family:courier new,monospace">dtrace -l | wc -l</span><span style="font-size:13px;font-family:Arial"> returns </span><span style="font-family:courier new,monospace">22466</span>).</span>
 -   <span style="font-family:Helvetica">DTrace cannot fetch low levels hardware data.</span>
 -   <span style="font-family:Helvetica">Performance impact when probe count goes under 36,000 probes (every kernel function entry/return) and 100,000 probes function in user-land.
