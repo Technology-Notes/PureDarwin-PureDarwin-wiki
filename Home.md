@@ -18,7 +18,7 @@ See the [Changelog](https://github.com/PureDarwin/PureDarwin/wiki/_history) for 
 -------------------------
 We have just finished migrating the project repository from [Google Code](https://code.google.com/p/puredarwin), to [GitHub](https://github.com/PureDarwin/PureDarwin), and encourage visitors to use the GitHub repository for both contribution, and checking out the latest build source. 
 
-Additionally, as an interim measure, a [version of PureDarwin Xmas](https://puredarwin.googlecode.com/files/NewBootEnvironment-XMas-1.7z) with a fixed boot sector, which is compatible with QEMU is also available. 
+Additionally, as an interim measure, a [version of PureDarwin Xmas](https://github.com/PureDarwin/LegacyDownloads/releases/download/PDXMASNBE01/NewBootEnvironment-XMas-1.7z) with a fixed boot sector, which is compatible with QEMU is also available. 
 
 Status
 ------
