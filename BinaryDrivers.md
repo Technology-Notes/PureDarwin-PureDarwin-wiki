@@ -7,7 +7,32 @@ Here is an incomplete list of such drivers. This is for quick reference only, pl
 
 ### Darwin 10: MacOSForge
 
-Status pending... feel free to edit.
+Apple16X50Serial.root.tar.gz
+AppleAPIC.root.tar.gz
+AppleHWSensor.root.tar.gz
+AppleIntelPIIXATA.root.tar.gz
+AppleRTL8139Ethernet.root.tar.gz
+AppleUSBCDCDriver.root.tar.gz
+AppleUSBAudio.root.tar.gz
+IOAudioFamily.root.tar.gz
+IOACPIFamily.root.tar.gz
+IOBDStorageFamily.root.tar.gz
+IOCDStorageFamily.root.tar.gz
+IODVDStorageFamily.root.tar.gz
+IOFireWireFamily.root.tar.gz
+IOFireWireSBP2.root.tar.gz
+IOGraphics.root.tar.gz
+IOHIDFamily.root.tar.gz
+IONetworkingFamily.root.tar.gz
+IOPCIFamily.root.tar.gz
+IOSCSIParallelFamily.root.tar.gz
+IOSerialFamily.root.tar.gz
+IOStorageFamily.root.tar.gz
+IOUSBFamily.root.tar.gz
+IOUSBMassStorageClass.root.tar.gz
+
+***** All found here!
+http://src.macosforge.org/Roots/10A432/
 
 ### Darwin 9: MacOSForge
 
