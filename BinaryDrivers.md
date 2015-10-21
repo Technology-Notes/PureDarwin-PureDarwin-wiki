@@ -16,11 +16,8 @@ http://src.macosforge.org/Roots/10A432/
 
 1.  AppleACPIPlatform.root.tar.gz
 2.  AppleRTC.root.tar.gz
-3.  IOATABlockStorage.root.tar.gz
-4.  IOBDStorageFamily.root.tar.gz
-5.  IOSCSIArchitectureModelFamily.root.tar.gz
-6.  efiboot.root.tar.gz
-7.  GraphicsDrivers.root.tar.gz
+3.  efiboot.root.tar.gz
+4.  GraphicsDrivers.root.tar.gz
 
 ### Darwin 8: darwinx86-801.iso
 
