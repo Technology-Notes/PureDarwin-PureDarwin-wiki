@@ -59,7 +59,9 @@ Want to help us on these? Check out the code from svn or hg repository and start
 -   <span style="font-weight:bold">Which license is this under?
      </span>This is a distribution that packages various individual parts. What the PureDarwin project has done from scratch is generally licensed under the new BSD license. However, most parts come from upstream (Apple and third-party) projects and are licensed under their respective licenses, such as the APSL, the Apple Driver License, the GPL, and others.
 -   <span style="font-weight:bold">Where are the sources?</span>
-     Sources for Darwin can be found at [http://opensource.apple.com](http://opensource.apple.com/) and <http://darwinbuild.macosforge.org/>, sources for third-party software can be found at <http://www.macports.org/> , and sources from the PureDarwin project can be found at <http://code.google.com/p/puredarwin/source/checkout> 
+     Sources for Darwin can be found at [http://opensource.apple.com](http://opensource.apple.com/) and <http://darwinbuild.macosforge.org/>, sources for third-party software can be found at <http://www.macports.org/>, and sources from the PureDarwin project migrated from
+can now be found here: <http://github.com/PureDarwin/PureDarwin>
+<http://code.google.com/p/puredarwin/source/checkout> 
 -   <span style="font-weight:bold">How do I contact the PureDarwin project?
      </span>We are on #puredarwin on irc.freenode.net most of the time, and this is our preferred communications channel. We also read the Darwin mailing lists, especially darwin-dev and darwinbuild-dev.
 
