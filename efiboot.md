@@ -50,7 +50,4 @@ of FAT16-formatted volumes. Whether this can also be used to boot a Darwin syste
 ### Using boot.efi in VirtualBox
 EFI emulation in [VirtualBox](../virtualbox.html) 4 is capable of loading and executing boot.efi as the bootloader. Hence boot-132 or its derivatives are no longer needed in VirtualBox. We were able to boot PureDarwinNano.iso this way.
 
-
-[![](../../_/rsrc/1295181011428/developers/booting/efiboot/boot.efi.png)](efiboot/boot.efi.png%3Fattredirects=0)
-
-
+![](https://raw.github.com/wiki/PureDarwin/PureDarwin/images/boot.efi.png)
