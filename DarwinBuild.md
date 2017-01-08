@@ -123,6 +123,20 @@ cd darwinbuild/
 svn checkout http://svn.macosforge.org/repository/darwinbuild/trunk/
 ```
 
+### From Git
+
+```
+git checkout https://github.com/macosforge/darwinbuild
+```
+
+### Generic Instructions (after getting darwinbuild source)
+
+Change directory to ensure you are in darwinbuild (if not already)
+
+```
+cd darwinbuild
+```
+
 #### Darwin 10
 Now Darwin 10 is out and the Darwinbuild project is targeting different releases via branches, xcodebuild is needed:
 
