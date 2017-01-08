@@ -140,7 +140,8 @@ Simply run:
     port -f upgrade darwinbuild
 Initialize Darwinbuild
 ----------------------
-    Some part of the environment
+
+### Some part of the environment
 
 #### The BuildRoot directory
 
@@ -262,7 +263,9 @@ Whenever you build something using DarwinBuild and don't specifiy otherwise (usi
     If during the process of downloading you get errors like "ERROR: could not find root: AppleUSBIrDA", this simply means that a binary root of the respective project has not been uploaded to the DarwinBuild server yet.
     (Perhaps it does not build correctly with DarwinBuild yet.)
 <span style="font-family:Arial;white-space:normal">The file xref.db contains the [Darwin xref database](darwinbuild/xref.html). It keeps track of the Darwin projects installed in your BuildRoot and their files and version numbers (think of xref roughly as a package manager like "apt" for Darwin binary roots). The xref database has been filled by the <span><span style="font-family:courier new,monospace"><span style="font-size:small">darwinbuild -load</span></span></span> command, and will be updated whenever you build something with DarwinBuild.                                                                                                                                                                         </span>
-    CoreFoundation as a first test case
+
+#### CoreFoundation as a first test case
+
 <span style="font-family:inherit"><span style="font-size:small">To build a specific package, e.g., CF, type:</span></span>
     darwinbuild CF
 <span style="font-family:inherit"><span style="font-size:small">[Troubles with CF building](darwinbuild/troubleshooting.html#TOC-CF-ok-)
