@@ -31,12 +31,12 @@ Contents
      * [**6.1** darwinxref](#darwinxref)  
          * [**6.1.1** Listing all the projects for a given branch](#listing-all-the-projects-for-a-given-branch)  
          * [**6.1.2** Searching the project of a given file](#searching-the-project-of-a-given-file)  
-         * [**6.1.3** Building all the projects (brutus way)](#building-all-the-projects-brutus-way-)  
+         * [**6.1.3** Building all the projects (brutus way)](#building-all-the-projects-brutus-way)  
      * [**6.2** Package the built binaries](#package-the-built-binaries)  
  * [**7** Resources](#resources)  
      * [**7.1** Deprecated](#deprecated)  
-         * [**7.1.1** Workaround DarwinBuild ticket #1 (no longer needed)](#workaround-darwinbuild-ticket-1-no-longer-needed-)  
-         * [**7.1.2** Populate BuildRoot (no longer needed)](#populate-buildroot-no-longer-needed-)  
+         * [**7.1.1** Workaround DarwinBuild ticket #1 (no longer needed)](#workaround-darwinbuild-ticket-1-no-longer-needed)  
+         * [**7.1.2** Populate BuildRoot (no longer needed)](#populate-buildroot-no-longer-needed)  
      * [**7.2** Credits](#credits)  
 
 Prerequisites
@@ -52,6 +52,7 @@ Prerequisites
     PATH=/sw/bin:$PATH # If you are using svn from fink
     In case you use MacPorts, your path should already and probably be set to
     export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
 Terminology
 -----------
 <span>Since the terminology used by DarwinBuild and PureDarwin is slightly different from what you might know from Linux, it makes sense to look at some commonly used terms now.</span>
@@ -66,27 +67,62 @@ Terminology
   BinaryDrivers                                             Closed-source                                 AppleRTC                                        As of May 2008, 6 projects are released by Apple in binary-only form
                                                              binary packages                                                                               
   --------------------------------------------------------- ---------------------------------------------- ----------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Installation
 ------------
+
 ### From SVN
 
 Go to the location where you want your DarwinBuild to live.
-    sudo su
-    mkdir darwinbuild
-    cd darwinbuild/
-    svn checkout http://svn.macosforge.org/repository/darwinbuild/trunk/
-    Darwin 10Now Darwin 10 is out and the Darwinbuild project is targeting different releases via branches, xcodebuild is needed:cd trunk
-    xcodebuild install DSTROOT=/[...]=== BUILD AGGREGATE TARGET world OF PROJECT darwinbuild WITH THE DEFAULT CONFIGURATION (Public) ===Check dependencies** BUILD SUCCEEDED **
-    A fresh darwinbuild folder is now present: "/usr/local/share/darwinbuild".Darwin 9Before Darwin 10 was released, simply compile DarwinBuild.cd trunk/
-    make
-    make install
-    export PATH=/usr/local/bin:$PATH 
-    DarwinBuild should now be installed.
-    If you want to update later, back to your svn sources directory:
-    cd darwinbuild/trunksvn updateU darwinbuild/installXcode31U plists/9A581.plistUpdated to revision 394.
-    Finally,
-    make clean && make && make install
+
+```
+sudo su
+mkdir darwinbuild
+cd darwinbuild/
+svn checkout http://svn.macosforge.org/repository/darwinbuild/trunk/
+```
+
+#### Darwin 10
+Now Darwin 10 is out and the Darwinbuild project is targeting different releases via branches, xcodebuild is needed:
+
+```
+cd trunk
+xcodebuild install DSTROOT=/
+```
+
+> [...]=== BUILD AGGREGATE TARGET world OF PROJECT darwinbuild WITH THE DEFAULT CONFIGURATION (Public) ===Check dependencies** BUILD SUCCEEDED **
+
+A fresh darwinbuild folder is now present: "/usr/local/share/darwinbuild".
+
+#### Darwin 9
+
+Before Darwin 10 was released, simply compile DarwinBuild.
+
+```
+cd trunk/
+make
+make install
+export PATH=/usr/local/bin:$PATH
+```
+
+DarwinBuild should now be installed.
+If you want to update later, back to your svn sources directory:
+
+```
+cd darwinbuild/trunksvn
+updateU darwinbuild/installXcode31U
+```
+
+> plists/9A581.plistUpdated to revision 394.
+
+Finally,
+
+```
+make clean && make && make install
+```
+
 ### From MacPorts
+
 Simply run:
     port install darwinbuild
     ---> Computing dependencies for darwinbuild
@@ -105,7 +141,9 @@ Simply run:
 Initialize Darwinbuild
 ----------------------
     Some part of the environment
+
 #### The BuildRoot directory
+
 <span style="font-size:13px">This place could also be called the BuildChroot directory, everything fetch or built by darwinbuild will reside inside this directory.</span>
 <span style="font-family:inherit"><span style="font-size:small"><span><span style="text-decoration:underline">Notes:</span> The build version "9J61" (2009/05) used below is just an example.
 (At the time of this writing, [9F33pd1.plist](http://puredarwin.googlecode.com/svn/trunk/plists/9F33pd1.plist) and [9G55pd1.plist](http://puredarwin.googlecode.com/svn/trunk/plists/9G55pd1.plist) are  recommended, as it includes PureDarwin-specific patches. You can get it from the [PureDarwin SVN repository](http://code.google.com/p/puredarwin/source/browse/trunk/plists/).)</span></span></span>
@@ -160,7 +198,9 @@ Initialize Darwinbuild
     # Added by darwinbuild on 20090523154428
     /Users/aladin/PureDarwin/darwinbuild/9J61/.build/buildroot.nfs -maproot=0:10
     Take a look at http://darwinbuild.macosforge.org/trac/ticket/86 if your /etc/exports grows to fast.
+
 #### Logs folder
+
 Later on, if a project fails to build (and depending your tty), you will want to look into the entire history of build logs.
 So simply look into the "<span style="font-style:italic">Logs/&lt;project&gt;/&lt;project&gt;-&lt;version&gt;~&lt;build attempts&gt;</span>" folder for a detailled compilation loh. In this case the "CommonCrypto" project has been successfully built at the first attempt and its log can be found in <span style="font-style:italic">[...]/9J61/Logs/CommonCrypto/CommonCrypto-32207.log~1.</span>
 The entire content cannot be pasted here, but most the time, the end crowns with:
@@ -181,6 +221,7 @@ With a project which has failed to build, the end can looks like:
 
 Building projects
 -----------------
+
 Before building a project, it is mandatory to initialize again (refresh) the darwinbuild environment. Same apply if the initialized darwinbuild shell session has been closed. After running <span style="font-family:courier new,monospace"><span style="font-size:small">darwinbuild -init</span></span> ..., the output should look like for:
 -    <span style="font-weight:bold"><span style="font-size:small">darwinbuild -init 9J61</span></span>
 
@@ -228,7 +269,9 @@ Whenever you build something using DarwinBuild and don't specifiy otherwise (usi
 </span></span>
 <span style="font-family:inherit"><span style="font-size:small">CF is a test case to build. On the first build in the new BuildRoot, DarwinBuild will do some initializations, e.g., copy some header files from the host OS. If it fails, then some prerequisites might be missing or you might need to use <span style="font-family:courier new,monospace">-nochroot</span> (in case not all prerequisites are uploaded to DarwinBuild yet; this would then use the files from the currently running OS rather than from DarwinBuild).</span></span>
 If the build succeeds, you should see a <span style="font-weight:bold"><span style="font-weight:normal"><span style="font-style:italic">Roots/CF/CF-476.10.root~1</span></span><span><span style="font-weight:normal"><span style="font-style:italic"> </span></span></span><span style="font-weight:normal">directory containing the files you just built.</span></span>
+
 ### xnu
+
 A classic test case is xnu, the kernel.
 The command below will fetch and build the xnu project. Before that step, some binaryroots (dependencies of the xnu project. as e.g., libgcc, dylib, developer_cmds, etc..) will be downloaded and loaded into the BuildRoot.
 <span style="font-family:courier new,monospace">darwinbuild xnu</span>
@@ -237,7 +280,9 @@ If the build succeeds, you can see a <span style="font-style:italic">xnu/xnu-12
 <span style="font-family:courier new,monospace"><span style="font-size:small">darwinbuild -load xnu
 <span style="color:rgb(102,102,102)">Copying xnu from /Volumes/Builds/9J61/Roots/xnu/xnu-1228.12.14.root~1 ...
 xnu - 2640 files registered.</span></span></span>
-### /XCD/loper {style="margin:10px 10px 10px 0px;background-color:transparent;color:rgb(0,0,0);font-family:Arial,Verdana,sans-serif;font-size:18px"}
+
+### /XCD/loper
+
 <span style="font-size:13px;font-weight:normal">You might come across a warning that <span style="font-family:courier new,monospace"><span style="font-size:small">/XCD/loper is missing</span></span>.</span>
 <span style="font-size:13px;font-weight:normal">Inside BuildRoot, there should be a directory called <span style="font-style:italic">XCD/</span> which contains Xcode and its dependencies (e.g., Xcode requires a proper CoreFoundation, not CF-Lite).</span>
 <span style="font-size:13px;font-weight:normal">Anything under XCD should only link or refer to any other thing in XCD in order to "keep away" Xcode dependencies. If not, there's something wrong.
@@ -248,8 +293,10 @@ xnu - 2640 files registered.</span></span></span>
 <span style="font-size:13px;font-weight:normal"><span style="font-family:courier new,monospace"><span style="font-size:small"><span style="color:rgb(68,68,68)">/Developer/darwinbuild/9C31/BuildRoot/ Analyzing Xcode dependencies ...</span></span></span></span>
 <span style="font-weight:normal"><span style="font-family:courier new,monospace"><span style="font-size:small"><span style="color:rgb(68,68,68)">Copying Xcode and dependencies ...</span></span></span></span>
 <span style="font-size:13px;font-weight:normal"></span>
+
 More cool stuff DarwinBuild can do
 ----------------------------------
+
 <span style="font-family:inherit"><span style="font-size:small">These need to be documented here</span></span>
 -   <span style="font-family:inherit"><span style="font-size:small">buildorder.pl</span></span>
 -   <span style="font-family:inherit"><span style="font-size:small">ditto.sh</span></span>
@@ -263,13 +310,19 @@ More cool stuff DarwinBuild can do
 -   <span style="font-family:inherit"><span style="font-size:small">manifest</span></span>
 -   <span style="font-family:inherit"><span style="font-size:small">processtrace.sh</span></span>
 -   <span style="font-family:inherit"><span style="font-size:small">thinPackages.sh</span></span>
+
 ### darwinxref
+
 #### Listing all the projects for a given branch
+
 <span style="font-family:courier new,monospace"><span style="font-size:small">darwinxref -b 9G55 version '*'</span></span>
+
 #### Searching the project of a given file
+
 <span style="font-family:courier new,monospace"><span style="font-size:small">darwinxref findFile launchctl</span></span>
 <span style="font-family:courier new,monospace"><span style="font-size:small"><span style="color:rgb(68,68,68)">launchd:</span></span></span>
 <span style="white-space:pre"><span style="font-family:courier new,monospace"><span style="font-size:small"><span style="color:rgb(68,68,68)"> </span></span></span></span><span style="font-family:courier new,monospace"><span style="font-size:small"><span style="color:rgb(68,68,68)">/bin/launchctl</span></span></span>
+
 #### Building all the projects (brutus way)
 
 <span style="font-family:courier new,monospace"><span style="font-size:small">for X in $(darwinxref version '*' | cut -f 1 -d '-'); do </span></span><span style="font-family:courier new,monospace"><span style="font-size:small">darwinbuild $X; done</span></span>
@@ -278,7 +331,8 @@ More cool stuff DarwinBuild can do
 <span style="font-family:courier new;font-size:12px"><span style="font-family:Arial;font-size:13px"> </span></span>
 <span style="text-decoration:underline">Note:</span> Of course, this doesn't mean all the projects will be compiled.
 
-### Package the built binaries {style="background-color:transparent;color:rgb(0,0,0);font-family:Arial,Verdana,sans-serif;font-size:18px;margin-top:10px;margin-right:10px;margin-bottom:10px;margin-left:0px"}
+### Package the built binaries
+
 <span style="font-family:inherit"><span style="font-size:small">Time to package them up!</span></span>
     {DarwinBuild_Checkout_Dir}/packageRoots.sh
     Archive tool: tar (GNU tar) 1.14
@@ -290,10 +344,14 @@ More cool stuff DarwinBuild can do
     CF.root.tar.gz
 <span style="font-family:inherit"><span style="font-size:small">Why doesn't it have a version <span style="font-size:12px">number?
 </span></span></span>
+
 Resources
 ---------
+
 ### Deprecated
+
 #### Workaround DarwinBuild ticket #1 (no longer needed)
+
 <span style="font-family:inherit"><span style="font-size:small"><span style="font-size:12px">The DarwinBuild ticket#1 workaround is <span style="font-weight:bold">no longer needed</span> since on the [Darwinbuild website](http://darwinbuild.macosforge.org/), we can read (news from 2009/04/17): "<span style="font-style:italic">The latest revision of trunk has support for sparsebundles and NFS Loopback in order to avoid the problems with xcodebuild inside of chroots. If you do not change the way you use darwinbuild, you will start seeing the sparsebundle storage. Nothing else is needed and Xcode-based projects will build on whatever filesyste</span><span style="font-style:italic">m you h<span style="font-style:normal">ave."
 Since DarwinBuild currently inherits a bug from Xcode that makes it impossible to use it on a HFS+ volume, we are going to use a workaround that involves setting up NFS locally.<span style="font-family:courier new,monospace">
 </span></span></span></span></span></span>
@@ -307,7 +365,8 @@ mkdir /DeveloNFS
 mount -t nfs localhost:/Developer /DeveloNFS</span>
 You should use /DeveloNFS for your DarwinBuild-related work, then you should not encounter [DarwinBuild ticket #1](http://darwinbuild.macosforge.org/trac/ticket/1)
 <span style="font-weight:bold">Notes:</span> Using an UFS disk image (a bit deprecated though) is another possible alternative not described here.</span></span></span></span></span>
-    Populate BuildRoot (no longer needed)
+    
+#### Populate BuildRoot (no longer needed)
     Populating the BuildRoot directory via the way below is no longer needed because the dependencies of a project are automatically retrieved and loaded in the BuildRoot.
     Theoretically you could begin building projects with DarwinBuild now. However, this would mean that you would have to build binaries using your host Mac OS X as the build environment (using -nochroot). This would clearly not be ideal, since the resulting binaries would not be guaranteed to run on Darwin. Hence, we want to build Darwin projects using Darwin itself as the build environment ("self-hosted").
     To do this, we use a chroot environment which resides in the BuildRoot directory. We can fill this BuildRoot with all available Darwin binaries using the following command:
@@ -323,7 +382,9 @@ You should use /DeveloNFS for your DarwinBuild-related work, then you should not
 <span style="font-family:inherit"><span style="font-size:small"><http://darwinbuild.macosforge.org/> The DarwinBuild Project
  <http://darwinbuild.macosforge.org/trac/browser/trunk/README> </span></span>
 <span style="font-family:inherit"><span style="font-size:small">[Archives](http://lists.macosforge.org/pipermail/darwinbuild-dev/) darwinbuild-dev mailing list at lists.macosforge.org</span></span>
+
 ### Credits
+
 <span style="font-size:small">Credits go to kvv and _wms for their work on DarwinBuild and for their excellent online support. 
  This page was started by probono in the spirit of the </span>[<span style="font-family:inherit"><span style="font-size:small">DarwinBuild newbie guide</span></span>](http://lists.apple.com/archives/darwin-dev/2006/Nov/msg00000.html "http://lists.apple.com/archives/darwin-dev/2006/Nov/msg00000.html")<span style="font-family:inherit"><span style="font-size:small"> by Craig Harman, but specifically covers Darwin versions starting with 9.</span></span>
 
