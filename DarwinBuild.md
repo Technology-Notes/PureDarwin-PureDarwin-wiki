@@ -26,7 +26,7 @@ Contents
  * [**5** Building projects](#building-projects)  
      * [**5.1** CoreFoundation as a first test case](#corefoundation-as-a-first-test-case)  
      * [**5.2** xnu](#xnu)  
-     * [**5.3** /XCD/loper](#xcd-loper)  
+     * [**5.3** /XCD/loper](#xcdloper)  
  * [**6** More cool stuff DarwinBuild can do](#more-cool-stuff-darwinbuild-can-do)  
      * [**6.1** darwinxref](#darwinxref)  
          * [**6.1.1** Listing all the projects for a given branch](#listing-all-the-projects-for-a-given-branch)  
