@@ -55,18 +55,59 @@ Prerequisites
 
 Terminology
 -----------
-<span>Since the terminology used by DarwinBuild and PureDarwin is slightly different from what you might know from Linux, it makes sense to look at some commonly used terms now.</span>
 
-  --------------------------------------------------------- ---------------------------------------------- ----------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  <span style="font-weight:bold">DarwinBuild term</span>   <span style="font-weight:bold">Approximate    <span style="font-weight:bold">Example</span>   <span style="font-weight:bold">Comments</span>
-                                                             Linux equivalent</span>                                                                       
-  Project                                                   Upstream project's source code; .orig.tar.gz   bash                                            Most of Apple's own projects are under the APSL, other upstream open source projects have been converted to DarwinBuild projects and are under the respective project's sources
-  [xref database](darwinbuild/xref.html)                    Database of the package manager                dpkg, rpm                                       The xref database has (so far) only been used during the build process, but not as a package manager for a running Darwin system. Like package manager databases, the xref database knows about build-time and run-time dependencies
-  Roots                                                    Binary packages                                deb                                             Binary roots that contain code for all architectures ("universal/fat binaries") are packed as .tar.gz files, whereas binary roots that contain code for just one architecture ("stripped", e.g., i386) are usually packed as .tar.bz2 files
-  binary roots                                                                                                                                             
-  BinaryDrivers                                             Closed-source                                 AppleRTC                                        As of May 2008, 6 projects are released by Apple in binary-only form
-                                                             binary packages                                                                               
-  --------------------------------------------------------- ---------------------------------------------- ----------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Since the terminology used by DarwinBuild and PureDarwin is slightly different from what you might know from Linux, it makes sense to look at some commonly used terms now.
+
+<!-- | <span style="font-weight:bold">DarwinBuild term</span> | <span style="font-weight:bold">Approximate
+Linux equivalent</span> | <span style="font-weight:bold">Example</span> | <span style="font-weight:bold">Comments</span> | -->
+
+### Project
+
+Upstream project's source code; .orig.tar.gz
+
+#### Example
+
+bash *(as a project not command)*
+
+#### Comments
+
+Most of Apple's own projects are under the APSL, other upstream open source projects have been converted to DarwinBuild projects and are under the respective project's sources
+
+### [xref database](http://www.puredarwin.org/developers/darwinbuild/xref)
+
+Database of the package manager
+
+#### Example
+
+dpkg, rpm
+
+#### Comments
+
+The xref database has (so far) only been used during the build process, but not as a package manager for a running Darwin system. Like package manager databases, the xref database knows about build-time and run-time dependencies
+
+### Roots
+
+binary roots
+
+#### Example
+
+Binary packages (.deb, .rpm)
+
+#### Comments
+
+Binary roots that contain code for all architectures ("universal/fat binaries") are packed as .tar.gz files, whereas binary roots that contain code for just one architecture ("stripped", e.g., i386) are usually packed as .tar.bz2 files 
+
+### BinaryDrivers
+
+Closed-source binary packages
+
+#### Example
+
+AppleRTC
+
+#### Comments
+
+As of May 2008, 6 projects are released by Apple in binary-only form
 
 Installation
 ------------
