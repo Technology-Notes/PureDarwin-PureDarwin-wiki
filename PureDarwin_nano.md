@@ -7,7 +7,9 @@ This page describes the minimal components needed for a minimal PureDarwin syste
 <div class="sites-embed-border-off sites-embed" style="width:300px;">
 <div class="sites-embed-content sites-embed-type-toc">
 <div class="goog-toc sites-embed-toc-maxdepth-6">
+
 Contents
+
 1.  [**1** Download](puredarwin-nano.html#TOC-Download)
 2.  [**2** Components](puredarwin-nano.html#TOC-Components)
     1.  [**2.1** Bootloader](puredarwin-nano.html#TOC-Bootloader)
