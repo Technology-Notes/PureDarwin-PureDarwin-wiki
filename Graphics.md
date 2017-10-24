@@ -10,7 +10,9 @@ This page is a work in progress, please contribute.
 <div class="sites-embed-border-off sites-embed" style="width:250px;">
 <div class="sites-embed-content sites-embed-type-toc">
 <div class="goog-toc sites-embed-toc-maxdepth-6">
+
 Contents
+
 1.  [**1** Overview](graphics.html#TOC-Overview)
 2.  [**2** PureDarwin](graphics.html#TOC-PureDarwin)
     1.  [**2.1** IOGraphics](graphics.html#TOC-IOGraphics)
@@ -27,16 +29,23 @@ Contents
 
 
 ### Overview
+
 While Darwin is the operating system underlying Mac OS X, the graphical environments of PureDarwin and Mac OS X are very different. This is because most graphical aspects of Mac OS X (especially Quartz and Aqua) are proprietary, closed-source software and are not available for PureDarwin. Hence, PureDarwin uses a more traditional UNIX-like graphics system (X server), waiting a better alternative.
-### PureDarwin<span style="font-size:13px;font-weight:normal">![](http://sites.google.com/a/puredarwin.org/puredarwin/_/rsrc/1212143186078/users/prerequisites/darwin9.gif)</span> {style="background-color:transparent;color:rgb(0,0,0);font-family:Arial,Verdana,sans-serif;font-size:18px;margin-top:10px;margin-right:10px;margin-bottom:10px;margin-left:0px"}
+
+### PureDarwin<span style="font-size:13px;font-weight:normal">![](http://sites.google.com/a/puredarwin.org/puredarwin/_/rsrc/1212143186078/users/prerequisites/darwin9.gif)</span> 
+
 What follows is an overview about the various terms and components that make up the graphical infrastructure of PureDarwin.
-#### IOGraphics {style="background-color:transparent;color:rgb(0,0,0);font-family:Arial,Verdana,sans-serif;font-size:14px;margin-top:10px;margin-right:10px;margin-bottom:10px;margin-left:0px"}
+
+#### IOGraphics
+
 The IOGraphics project consists of
 -   IOGraphicsFamily.kext
 -   IONDRVSupport.kext (legacy; apparently for very old graphics chips such as  [ATI Rage series](http://en.wikipedia.org/wiki/Comparison_of_ATI_Graphics_Processing_Units#Rage_series) cards from around 1997, Chips and Technologies [Asiliant 65550](http://www.asiliant.com/65550.htm) from around 1997, used in PowerBook 2400/3400)
 
 It is open source.
+
 #### GraphicsDrivers
+
 GraphicsDrivers is a proprietary, closed-source project that consists (or <span><span style="color:rgb(255,0,0)">doesn't yet include</span></span>) of the following drivers:
 <span style="font-weight:bold">ATI</span>
 -   <span style="font-weight:bold">Radeon</span>: Drivers for a series of ATI [R100](http://en.wikipedia.org/wiki/Radeon_R100)-based graphics cards from 2001 
@@ -81,24 +90,41 @@ GraphicsDrivers is a proprietary, closed-source project that consists (or <span>
 The GraphicsDrivers project is available for use with Darwin under the Apple Driver License.
 The drivers in Mac OS X 10.5.5 are SourceVersion 53017 (GraphicsDrivers-5.30.17). The [MacBook, MacBook Pro Software Update 1.2](http://www.apple.com/downloads/macosx/apple/application_updates/macbookmacbookprosoftwareupdate12.html) contains SourceVersion 53410 (GraphicsDrivers-5.34.10). The version available for Darwin seems to be still 40024.
 
-#### X server {style="background-color:transparent;color:rgb(0,0,0);font-family:Arial,Verdana,sans-serif;font-size:14px;margin-top:10px;margin-right:10px;margin-bottom:10px;margin-left:0px"}
+#### X server
+
 Like most other UNIX-like operating systems, PureDarwin uses an X server to display on-screen graphics. Please see the [XFree86](xfree86.html) and [X.Org](xorg.html) pages for details.
-#### VMware framebuffer {style="background-color:transparent;color:rgb(0,0,0);font-family:Arial,Verdana,sans-serif;font-size:14px;margin-top:10px;margin-right:10px;margin-bottom:10px;margin-left:0px"}
+
+#### VMware framebuffer
+
 <span style="font-size:13px;font-weight:normal">This is a framebuffer kext included in the VMware Tools for Mac.</span>
+
 #### IOProxyVideoFamily
+
 <http://code.google.com/p/ioproxyvideofamily/> <span style="font-weight:bold">need investigation</span>
+
 ### Mac OS X
+
 <div style="display:inline;float:right;margin-top:5px;margin-right:10px;margin-bottom:5px;margin-left:10px">
+
 [![](http://sites.google.com/a/puredarwin.org/puredarwin/_/rsrc/1212143130425/users/prerequisites/xicon.jpg)](http://sites.google.com/a/puredarwin.org/puredarwin/_/rsrc/1212143130425/users/prerequisites/xicon.jpg)
+
 What follows is an overview about the various terms and components that make up the graphical infrastructure of Mac OS X.
+
 #### Quartz
+
 Apple describes Quartz as the "graphics system which forms the foundation of the imaging model for Mac OS X". The Quatz drawing engine internally uses the PDF format. It can be seen as the successor of the "Display PostScript"-based engine used in NeXTSTEP. Quartz is also responsible for rendering effects like drop shadows in the Mac OS X user interface. Quartz is contained in the closed-source, proprietary<span style="font-weight:bold"> Core Graphics</span> framework. According to Apple, the terms Quartz and Core Graphics are often used synonymously: "The Quartz 2D API is part of the Core Graphics framework, so you may see Quartz referred to as Core Graphics or, simply, CG". For more information on Quartz, see the [ADC documentation on Quartz](http://developer.apple.com/documentation/GraphicsImaging/Quartz-date.html). (It is roughly equivalent to what is known as a "window server" and "window manager" on other systems.)
+
 #### Aqua
 The term Aqua is used to describe the visual theme of the Mac OS X user interface. (It is roughly equivalent to what is known as a "skin" on other systems.)
+
 #### Framebuffer
+
 AppleIntelIntegratedFramebuffer.kext is loaded by default on Mac OS X.
+
 ### Troubleshooting
+
 #### AppleIntel830.kext fails to load
+
 AppleIntel830.kext is part of the GraphicsDrivers project.
 <span style="font-weight:bold">
 </span>
