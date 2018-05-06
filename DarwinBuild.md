@@ -125,7 +125,7 @@ svn checkout http://svn.macosforge.org/repository/darwinbuild/trunk/
 ### From Git
 
 ```
-git checkout https://github.com/macosforge/darwinbuild
+git clone https://github.com/macosforge/darwinbuild
 ```
 
 ### Generic Instructions (after getting darwinbuild source)
