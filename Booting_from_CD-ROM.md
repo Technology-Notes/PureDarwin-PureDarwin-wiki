@@ -16,7 +16,7 @@ The key is to use a HFS+ filesystem for the image (thus, making a ".dmg" rather 
 
 ### How to create a hybrid image using pd_makedmg 
 
-To create a hybrid image, you can use the [pd_makedmg](../../downloads.html) script. It is based on [darwinmaster.sh](http://darwinbuild.macosforge.org/trac/browser/trunk/darwinbuild/darwinmaster.sh), and has been extended to support EFI booting in addition to BIOS booting. Its syntax is as follows:
+To create a hybrid image, you can use the [pd_makedmg](https://github.com/PureDarwin/PureDarwin/blob/master/scripts/pd_makedmg) script. It is based on [darwinmaster.sh](https://darwinbuild.macosforge.org/trac/browser/trunk/darwinbuild/darwinmaster.sh), and has been extended to support EFI booting in addition to BIOS booting. Its syntax is as follows:
 
 ```
 pd_makedmg /Volumes/PureDarwinDisk /tmp/puredarwin.dmg PureDarwin
