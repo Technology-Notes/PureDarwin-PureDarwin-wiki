@@ -37,7 +37,7 @@ At the same time, the PureDarwin project would like to invite the community to d
 
 The developer preview is available for download as a pre-configured virtual machine for [VMware](wiki/VMware) Fusion 2.0 on Macintosh, and the code used to generate it is available in a Subversion/Mercurial repository form.
 
-A minimal PureDarwin system known as "[PureDarwin nano](https://github.com/PureDarwin/PureDarwin/wiki/PureDarwin_nano)" is also available, where only one process is running (a shell).
+A minimal PureDarwin system known as "[PureDarwin Nano](https://github.com/PureDarwin/PureDarwin/wiki/PureDarwin-Nano)" is also available, where only one process is running (a shell).
 Credits
 -------
 
