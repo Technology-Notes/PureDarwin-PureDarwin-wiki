@@ -123,46 +123,11 @@ Change directory to ensure you are in darwinbuild (if not already)
 
 ```
 cd darwinbuild
-```
-
-#### Darwin 10
-Now Darwin 10 is out and the Darwinbuild project is targeting different releases via branches, xcodebuild is needed:
-
-```
-cd trunk
 xcodebuild install DSTROOT=/
 ```
 
-> [...]=== BUILD AGGREGATE TARGET world OF PROJECT darwinbuild WITH THE DEFAULT CONFIGURATION (Public) ===Check dependencies** BUILD SUCCEEDED **
-
 A fresh darwinbuild folder is now present: "/usr/local/share/darwinbuild".
 
-#### Darwin 9
-
-Before Darwin 10 was released, simply compile DarwinBuild.
-
-```
-cd trunk/
-make
-make install
-export PATH=/usr/local/bin:$PATH
-```
-
-DarwinBuild should now be installed.
-If you want to update later, back to your svn sources directory:
-
-```
-cd darwinbuild/trunksvn
-updateU darwinbuild/installXcode31U
-```
-
-> plists/9A581.plistUpdated to revision 394.
-
-Finally,
-
-```
-make clean && make && make install
-```
 
 ### From MacPorts
 
