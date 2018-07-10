@@ -106,26 +106,17 @@ AppleRTC
 
 #### Comments
 
-As of May 2008, 6 projects are released by Apple in binary-only form
+As of May 2008, 6 projects are released by Apple in binary-only form.
+
+Development on macosforge's darwinbuild seem stopped on github, and subversion repository seems to be offline. Use the git repo bellow for now.
 
 Installation
 ------------
 
-### From SVN
-
-Go to the location where you want your DarwinBuild to live.
-
-```
-sudo su
-mkdir darwinbuild
-cd darwinbuild/
-svn checkout http://svn.macosforge.org/repository/darwinbuild/trunk/
-```
-
 ### From Git
 
 ```
-git clone https://github.com/macosforge/darwinbuild
+git clone https://github.com/PureDarwin/darwinbuild.git
 ```
 
 ### Generic Instructions (after getting darwinbuild source)
