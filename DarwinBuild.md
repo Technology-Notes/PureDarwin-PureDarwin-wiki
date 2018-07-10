@@ -70,7 +70,7 @@ bash *(as a project not command)*
 
 Most of Apple's own projects are under the APSL, other upstream open source projects have been converted to DarwinBuild projects and are under the respective project's sources
 
-### [xref database](http://www.puredarwin.org/developers/darwinbuild/xref)
+### [xref database](https://web.archive.org/web/20160826114642/http://www.puredarwin.org/developers/darwinbuild/xref)
 
 Database of the package manager
 
