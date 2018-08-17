@@ -15,21 +15,22 @@ This page describes how to use the contents of the repository to build your own 
 <div class="sites-embed-content sites-embed-type-toc">
 <div class="goog-toc sites-embed-toc-maxdepth-6">
 Contents
-1.  [**1** Basic structure](repository.html#TOC-Basic-structure)
-2.  [**2** Usage](repository.html#TOC-Usage)
-    1.  [**2.1** Requirements](repository.html#TOC-Requirements)
-    2.  [**2.2** Quick steps](repository.html#TOC-Quick-steps)
-    3.  [**2.3** Configuration](repository.html#TOC-Configuration)
-        1.  [**2.3.1** DARWIN_RELEASE](repository.html#TOC-DARWIN_RELEASE)
-        2.  [**2.3.2** ARCH](repository.html#TOC-ARCH)
-        3.  [**2.3.3** PUREDARWIN_RELEASE](repository.html#TOC-PUREDARWIN_RELEASE)
-        4.  [**2.3.4** BINARYROOTS_LIST_FILE](repository.html#TOC-BINARYROOTS_LIST_FILE)
-        5.  [**2.3.5** DARWINBUILD_DIR](repository.html#TOC-DARWINBUILD_DIR)
-        6.  [**2.3.6** ADD_CLONE](repository.html#TOC-ADD_CLONE)
-    4.  [**2.4** "Genetic" constraints](repository.html#TOC-Genetic-constraints)
-        1.  [**2.4.1** Basic overview](repository.html#TOC-Basic-overview)
-        2.  [**2.4.2** Zooming chickens and eggs](repository.html#TOC-Zooming-chickens-and-eggs)
-3.  [**3** Resources](repository.html#TOC-Resources)
+
+1.  [**1** Basic structure](#basic-structure)
+2.  [**2** Usage](#usage)
+    1.  [**2.1** Requirements](#requirements)
+    2.  [**2.2** Quick steps](#quick-steps)
+    3.  [**2.3** Configuration](#configuration)
+        1.  [**2.3.1** DARWIN_RELEASE](#darwin_release)
+        2.  [**2.3.2** ARCH](#arch)
+        3.  [**2.3.3** PUREDARWIN_RELEASE](#puredarwin_release)
+        4.  [**2.3.4** BINARYROOTS_LIST_FILE](#binaryroots_list_file)
+        5.  [**2.3.5** DARWINBUILD_DIR](#darwinbuild_dir)
+        6.  [**2.3.6** ADD_CLONE]#add_clone)
+    4.  [**2.4** "Genetic" constraints](#genetic-constraints)
+        1.  [**2.4.1** Basic overview](#basic-overview)
+        2.  [**2.4.2** Zooming chickens and eggs](#zooming-chickens-and-eggs)
+3.  [**3** Resources](#resources)
 
 Basic structure
 ---------------
@@ -75,7 +76,8 @@ Simply fetch binaryroots, thin them and build/deploy PureDarwin to the requested
 3.  <span style="font-size:small">./pd_setup</span> (a usage should display potential choices)
     **Important:** Be aware that a full (non-nano) PureDarwin system currently cannot be run from a read-only disk such as a CD-ROM, DVD, or an ISO file. It needs a r/w hard disk (real hardware) or virtual disk. This might be solved once we go the [Live CD](live-cd.html) way.
 
-[![](../_/rsrc/1260870057546/developers/repository/setup_process_overview.gif)](repository/setup_process_overview.gif%3Fattredirects=0)
+![![](../_/rsrc/1260870057546/developers/repository/setup_process_overview.gif)](repository/setup_process_overview.gif%3Fattredirects=0)
+
 ### Configuration
 In case you decided to edit [pd_config](http://code.google.com/p/puredarwin/source/browse/setup/pd_config) to reflect your needs, keep in mind only few variables need to be edited in the most cases.
 
