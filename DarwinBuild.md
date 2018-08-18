@@ -147,7 +147,8 @@ Output:
     ---> Activating darwinbuild @0.8.0_508
     ---> Cleaning darwinbuild
 ```
-    In order to upgrade to the latest revision of trunk
+
+In order to upgrade to the latest revision of trunk:
 ```
     % port selfupdate
     % port -f upgrade darwinbuild
