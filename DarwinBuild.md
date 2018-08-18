@@ -15,7 +15,7 @@ Contents
  * [**1** Prerequisites](#prerequisites)  
  * [**2** Terminology](#terminology)  
  * [**3** Installation](#installation)  
-     * [**3.1** From GIT](#from-git)
+     * [**3.1** From Git](#from-git)
      * [**3.2** From MacPorts](#from-macports)  
  * [**4** Initialize Darwinbuild](#initialize-darwinbuild)  
      * [**4.1** Some part of the environment](#some-part-of-the-environment)  
@@ -132,7 +132,9 @@ A fresh darwinbuild folder is now present: "/usr/local/share/darwinbuild".
 ### From MacPorts
 
 Simply run:
-    port install darwinbuild
+`% port install darwinbuild`
+Output:
+```
     ---> Computing dependencies for darwinbuild
     ---> Fetching darwinbuild
     ---> Verifying checksum(s) for darwinbuild
@@ -143,9 +145,12 @@ Simply run:
     ---> Installing darwinbuild @0.8.0_508
     ---> Activating darwinbuild @0.8.0_508
     ---> Cleaning darwinbuild
+```
     In order to upgrade to the latest revision of trunk
-    port selfupdate
-    port -f upgrade darwinbuild
+```
+    % port selfupdate
+    % port -f upgrade darwinbuild
+```
 
 Initialize Darwinbuild
 ----------------------
