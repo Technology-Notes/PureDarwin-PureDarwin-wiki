@@ -133,6 +133,7 @@ A fresh darwinbuild folder is now present: "/usr/local/share/darwinbuild".
 
 Simply run:
 `% port install darwinbuild`
+
 Output:
 ```
     ---> Computing dependencies for darwinbuild
