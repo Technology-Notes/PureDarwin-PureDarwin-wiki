@@ -3,7 +3,7 @@ Using DarwinBuild
 The DarwinBuild project provides an integrated build environment for Darwin projects.
 There are [many reasons](http://darwinbuild.macosforge.org/) why you should use DarwinBuild and although some parts of Darwin can be built without DarwinBuild, it is easier with it.
 This page describes some ways to use [DarwinBuild](http://darwinbuild.macosforge.org/) in order to build Darwin projects.
-It is a work in progess. Please post your comments below or edit this wiki page.
+It is a work in progress. Please post your comments below or edit this wiki page.
 
 
  
@@ -146,6 +146,7 @@ Simply run:
     In order to upgrade to the latest revision of trunk
     port selfupdate
     port -f upgrade darwinbuild
+
 Initialize Darwinbuild
 ----------------------
 
