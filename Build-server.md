@@ -2,7 +2,7 @@
 
 Special thanks to [MacStadium](http://www.macstadium.com) for sponsoring a hosted Mac mini, and for voltagex for organizing and setting it up.
 
-![MacStadium](http://www.macstadium.com/images/macstadium210.png)
+[![MacStadium](https://cloud.githubusercontent.com/assets/125011/22776032/097557ac-eea6-11e6-8ba8-eff22dfd58f1.png)](https://www.macstadium.com)
 
 ## Usage
 
