@@ -31,5 +31,5 @@ To browse announced services on the Mac, you can use [Bonjour Browser](http://w
 
 ### References
 
--   <http://developer.apple.com/opensource/internet/bonjour.html>
+-   <https://developer.apple.com/bonjour/>
 -   [DNS SRV (RFC 2782) Service Types](http://www.dns-sd.org/ServiceTypes.html)
