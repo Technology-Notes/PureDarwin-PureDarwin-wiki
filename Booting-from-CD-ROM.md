@@ -1,5 +1,3 @@
-Booting from CD-ROM
-===================
 This page describes how to produce a CD-ROM (or DVD, for that matter) which can boot Darwin on both EFI- and BIOS-based systems.
 
 ### What we want to do 
