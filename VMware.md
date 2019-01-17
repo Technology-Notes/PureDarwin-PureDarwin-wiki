@@ -2,56 +2,79 @@ VMware
 ======
 
 <div style="margin:5px 10px;display:inline;float:right">
-<span>    </span>[![](../_/rsrc/1247515808697/developers/vmware/vmware.gif)](vmware/vmware.gif%3Fattredirects=0)
+!(../_/rsrc/1247515808697/developers/vmware/vmware.gif)(vmware/vmware.gif%3Fattredirects=0)
+
 Many [VMware](http://www.vmware.com/) products are now able to run a Darwin system (e.g., PureDarwin).
 From *VMware Fusion 2.0* (Mac OS X) to *VMware Player 2.5* (free download for Windows and Linux) via *VMware ESX* and later versions, PureDarwin should boot without any troubles.
 
-**A more precise list will be constituted if respective [feedback](../todo.html) is received.
-**
+**A more precise list will be constituted if respective [feedback](../todo.html) is received.**
+
 <div class="sites-embed-align-left-wrapping-off">
 <div class="sites-embed-border-off sites-embed" style="width:357px;">
 <div class="sites-embed-content sites-embed-type-toc">
 <div class="goog-toc sites-embed-toc-maxdepth-6">
-Contents
-1.  [**1** Running PureDarwin in VMware](vmware.html#TOC-Running-PureDarwin-in-VMware)
-    1.  [**1.1** Requirements](vmware.html#TOC-Requirements)
-    2.  [**1.2** Using VMware other than Fusion ](vmware.html#TOC-Using-VMware-other-than-Fusion-)
-2.  [**2** Settings](vmware.html#TOC-Settings)
-    1.  [**2.1** VMware settings](vmware.html#TOC-VMware-settings)
-        1.  [**2.1.1** Enable the built-in VNC server](vmware.html#TOC-Enable-the-built-in-VNC-server)
-    2.  [**2.2** Boot arguments](vmware.html#TOC-Boot-arguments)
-    3.  [**2.3** Faking guest OS detection](vmware.html#TOC-Faking-guest-OS-detection)
-3.  [**3** Devices](vmware.html#TOC-Devices)
-4.  [**4** Boot](vmware.html#TOC-Boot)
-    1.  [**4.1** VMware Fusion BIOS](vmware.html#TOC-VMware-Fusion-BIOS)
-    2.  [**4.2** Bootloader](vmware.html#TOC-Bootloader)
-        1.  [**4.2.1** darwin.iso](vmware.html#TOC-darwin.iso)
-    3.  [**4.3** Single user mode](vmware.html#TOC-Single-user-mode)
-    4.  [**4.4** Multi user mode](vmware.html#TOC-Multi-user-mode)
-5.  [**5** Network](vmware.html#TOC-Network)
-    1.  [**5.1** Emulated NICs](vmware.html#TOC-Emulated-NICs)
-        1.  [**5.1.1** e1000](vmware.html#TOC-e1000)
-    2.  [**5.2** Status](vmware.html#TOC-Status)
-6.  [**6** e1000 support quest](vmware.html#TOC-e1000-support-quest)
-    1.  [**6.1** Notions](vmware.html#TOC-Notions)
-        1.  [**6.1.1** Driver and IOPCIDevice](vmware.html#TOC-Driver-and-IOPCIDevice)
-        2.  [**6.1.2** PCI matching summarization](vmware.html#TOC-PCI-matching-summarization)
-    2.  [**6.2** Vendor and Device IDs](vmware.html#TOC-Vendor-and-Device-IDs)
-        1.  [**6.2.1** Vendor ID (intel def.)](vmware.html#TOC-Vendor-ID-intel-def.-)
-        2.  [**6.2.2** Device ID (Intel def.)](vmware.html#TOC-Device-ID-Intel-def.-)
-        3.  [**6.2.3** PCI configuration space registers ](vmware.html#TOC-PCI-configuration-space-registers-)
-        4.  [**6.2.4** PCI matching dictionary](vmware.html#TOC-PCI-matching-dictionary)
-    3.  [**6.3** Real KEXTs](vmware.html#TOC-Real-KEXTs)
-        1.  [**6.3.1** w/o KEXT](vmware.html#TOC-w-o-KEXT)
-        2.  [**6.3.2** AppleIntel8255x](vmware.html#TOC-AppleIntel8255x)
-        3.  [**6.3.3** Intel82566MM](vmware.html#TOC-Intel82566MM)
-        4.  [**6.3.4** AppleIntel8254XEthernet](vmware.html#TOC-AppleIntel8254XEthernet)
-    4.  [**6.4** a KEXT pseudo-life](vmware.html#TOC-a-KEXT-pseudo-life)
-    5.  [**6.5** Host NIC](vmware.html#TOC-Host-NIC)
-7.  [**7** Troubleshooting](vmware.html#TOC-Troubleshooting)
-    1.  [**7.1** On read-only medium](vmware.html#TOC-On-read-only-medium)
-    2.  [**7.2** Random log](vmware.html#TOC-Random-log)
-8.  [**8** Resources](vmware.html#TOC-Resources)
+Contents<br>
+
+<ol>
+  <li><a href="vmware.html#TOC-Running-PureDarwin-in-VMware">Running PureDarwin in VMware</a></li>
+  <li><a href="vmware.html#TOC-Settings">Settings</a></li>
+    <ol>
+      <li><a href="vmware.html#TOC-VMware-settings">VMware settings</a></li>
+        <ol>
+          <li><a href="vmware.html#TOC-Enable-the-built-in-VNC-server">Enable the built-in VNC server</a></li>
+        </ol>
+      <li><a href="vmware.html#TOC-Boot-arguments">Boot arguments</a></li>
+      <li><a href="vmware.html#TOC-Faking-guest-OS-detection">Faking guest OS detection</a></li>
+    </ol>
+  <li><a href="vmware.html#TOC-Devices">Devices</a></li>
+    <ol>
+      <li><a href="vmware.html#TOC-VMware-Fusion-BIOS">VMware Fusion BIOS</a></li>
+      <li><a href="vmware.html#TOC-Bootloader">Bootloader</a></li>
+        <ol>
+          <li><a href="vmware.html#TOC-darwin.iso">darwin.iso</a></li>
+        </ol>
+      <li><a href="vmware.html#TOC-Single-user-mode">Single user mode</a></li>
+      <li><a href="vmware.html#TOC-Multi-user-mode">Multi user mode</a></li>
+    </ol>  <li><a href="vmware.html#TOC-Boot">Boot</a></li>
+  <li><a href="vmware.html#TOC-Network">Network</a></li>
+    <ol>
+      <li><a href="vmware.html#TOC-Emulated-NICs">Emulated NICs</a></li>
+        <ol>
+          <li><a href="vmware.html#TOC-e1000">e1000</a></li>
+        </ol>
+      <li><a href="vmware.html#TOC-Status">Status</a></li>
+    </ol>
+  <li><a href="vmware.html#TOC-e1000-support-quest">e1000 support quest</a></li>
+    <ol>
+      <li><a href="">Notions</a></li>
+        <ol>
+          <li><a href="vmware.html#TOC-Driver-and-IOPCIDevice">Driver and IOPCIDevice</a></li>
+          <li><a href="vmware.html#TOC-PCI-matching-summarization">PCI matching summarization</a></li>
+        </ol>
+      <li><a href="">Vendor and Device IDs</a></li>
+        <ol>
+          <li><a href="vmware.html#TOC-Vendor-ID-intel-def.-">Vendor ID (intel def.)</a></li>
+          <li><a href="vmware.html#TOC-Device-ID-Intel-def.-">Device ID (Intel def.)/a></li>
+          <li><a href="vmware.html#TOC-PCI-configuration-space-registers">PCI configuration space registers</a></li>
+          <li><a href="vmware.html#TOC-PCI-matching-dictionary">PCI matching dictionary</a></li>
+        </ol>
+      <li><a href="vmware.html#TOC-Real-KEXTs">Real KEXTs</a></li>
+        <ol>
+          <li><a href="vmware.html#TOC-w-o-KEXT">w/o KEXT</a></li>
+          <li><a href="vmware.html#TOC-AppleIntel8255x">AppleIntel8255x</a></li>
+          <li><a href="vmware.html#TOC-Intel82566MM">Intel82566MM</a></li>
+          <li><a href="vmware.html#TOC-AppleIntel8254XEthernet">AppleIntel8254XEthernet</a></li>
+        </ol>
+      <li><a href="vmware.html#TOC-a-KEXT-pseudo-life">a KEXT pseudo-life</a></li>
+      <li><a href="vmware.html#TOC-Host-NIC">Host NIC</a></li>
+    </ol>
+  <li><a href="vmware.html#TOC-Troubleshooting">Troubleshooting</a></li>
+    <ol>
+      <li><a href="vmware.html#TOC-On-read-only-medium">On read-only medium</a></li>
+      <li><a href="vmware.html#TOC-Random-log">Random log</a></li>
+    </ol>
+  <li><a href="vmware.html#TOC-Resources">Resources</a></li>
+</ol>
 
 Running PureDarwin in VMware
 ----------------------------
