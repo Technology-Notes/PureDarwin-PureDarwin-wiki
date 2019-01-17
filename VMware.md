@@ -54,7 +54,7 @@ Contents<br>
       <li><a href="">Vendor and Device IDs</a></li>
         <ol>
           <li><a href="vmware.html#TOC-Vendor-ID-intel-def.-">Vendor ID (intel def.)</a></li>
-          <li><a href="vmware.html#TOC-Device-ID-Intel-def.-">Device ID (Intel def.)/a></li>
+          <li><a href="vmware.html#TOC-Device-ID-Intel-def.-">Device ID (Intel def.)</a></li>
           <li><a href="vmware.html#TOC-PCI-configuration-space-registers">PCI configuration space registers</a></li>
           <li><a href="vmware.html#TOC-PCI-matching-dictionary">PCI matching dictionary</a></li>
         </ol>
