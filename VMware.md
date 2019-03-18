@@ -4,8 +4,8 @@ VMware
 <div style="margin:5px 10px;display:inline;float:right">
 !(../_/rsrc/1247515808697/developers/vmware/vmware.gif)(vmware/vmware.gif%3Fattredirects=0)
 
-Many [VMware](http://www.vmware.com/) products are now able to run a Darwin system (e.g., PureDarwin).
-From *VMware Fusion 2.0* (Mac OS X) to *VMware Player 2.5* (free download for Windows and Linux) via *VMware ESX* and later versions, PureDarwin should boot without any troubles.
+Many [VMware](http://www.vmware.com/) products are now able to run a Darwin system (e.g., PureDarwin).
+From *VMware Fusion 2.0* (Mac OS X) to *VMware Player 2.5* (free download for Windows and Linux) via *VMware ESX* and later versions, PureDarwin should boot without any troubles.
 
 **A more precise list will be constituted if respective [feedback](../todo.html) is received.**
 
@@ -16,64 +16,64 @@ From *VMware Fusion 2.0* (Mac OS X) to *VMware Player 2.5* (free download for W
 Contents<br>
 
 <ol>
-  <li><a href="vmware.html#TOC-Running-PureDarwin-in-VMware">Running PureDarwin in VMware</a></li>
-  <li><a href="vmware.html#TOC-Settings">Settings</a></li>
+  <li><a href="#Running-PureDarwin-in-VMware">Running PureDarwin in VMware</a></li>
+  <li><a href="#Settings">Settings</a></li>
     <ol>
-      <li><a href="vmware.html#TOC-VMware-settings">VMware settings</a></li>
+      <li><a href="#VMware-settings">VMware settings</a></li>
         <ol>
-          <li><a href="vmware.html#TOC-Enable-the-built-in-VNC-server">Enable the built-in VNC server</a></li>
+          <li><a href="#Enable-the-built-in-VNC-server">Enable the built-in VNC server</a></li>
         </ol>
-      <li><a href="vmware.html#TOC-Boot-arguments">Boot arguments</a></li>
-      <li><a href="vmware.html#TOC-Faking-guest-OS-detection">Faking guest OS detection</a></li>
+      <li><a href="#Boot-arguments">Boot arguments</a></li>
+      <li><a href="#Faking-guest-OS-detection">Faking guest OS detection</a></li>
     </ol>
-  <li><a href="vmware.html#TOC-Devices">Devices</a></li>
+  <li><a href="#Devices">Devices</a></li>
     <ol>
-      <li><a href="vmware.html#TOC-VMware-Fusion-BIOS">VMware Fusion BIOS</a></li>
-      <li><a href="vmware.html#TOC-Bootloader">Bootloader</a></li>
+      <li><a href="#VMware-Fusion-BIOS">VMware Fusion BIOS</a></li>
+      <li><a href="#Bootloader">Bootloader</a></li>
         <ol>
-          <li><a href="vmware.html#TOC-darwin.iso">darwin.iso</a></li>
+          <li><a href="#darwin.iso">darwin.iso</a></li>
         </ol>
-      <li><a href="vmware.html#TOC-Single-user-mode">Single user mode</a></li>
-      <li><a href="vmware.html#TOC-Multi-user-mode">Multi user mode</a></li>
-    </ol>  <li><a href="vmware.html#TOC-Boot">Boot</a></li>
-  <li><a href="vmware.html#TOC-Network">Network</a></li>
+      <li><a href="#Single-user-mode">Single user mode</a></li>
+      <li><a href="#Multi-user-mode">Multi user mode</a></li>
+    </ol>  <li><a href="#Boot">Boot</a></li>
+  <li><a href="#Network">Network</a></li>
     <ol>
-      <li><a href="vmware.html#TOC-Emulated-NICs">Emulated NICs</a></li>
+      <li><a href="#Emulated-NICs">Emulated NICs</a></li>
         <ol>
-          <li><a href="vmware.html#TOC-e1000">e1000</a></li>
+          <li><a href="#e1000">e1000</a></li>
         </ol>
-      <li><a href="vmware.html#TOC-Status">Status</a></li>
+      <li><a href="#Status">Status</a></li>
     </ol>
-  <li><a href="vmware.html#TOC-e1000-support-quest">e1000 support quest</a></li>
+  <li><a href="#e1000-support-quest">e1000 support quest</a></li>
     <ol>
       <li><a href="">Notions</a></li>
         <ol>
-          <li><a href="vmware.html#TOC-Driver-and-IOPCIDevice">Driver and IOPCIDevice</a></li>
-          <li><a href="vmware.html#TOC-PCI-matching-summarization">PCI matching summarization</a></li>
+          <li><a href="#Driver-and-IOPCIDevice">Driver and IOPCIDevice</a></li>
+          <li><a href="#PCI-matching-summarization">PCI matching summarization</a></li>
         </ol>
       <li><a href="">Vendor and Device IDs</a></li>
         <ol>
-          <li><a href="vmware.html#TOC-Vendor-ID-intel-def.-">Vendor ID (intel def.)</a></li>
-          <li><a href="vmware.html#TOC-Device-ID-Intel-def.-">Device ID (Intel def.)</a></li>
-          <li><a href="vmware.html#TOC-PCI-configuration-space-registers">PCI configuration space registers</a></li>
-          <li><a href="vmware.html#TOC-PCI-matching-dictionary">PCI matching dictionary</a></li>
+          <li><a href="#Vendor-ID-intel-def.-">Vendor ID (intel def.)</a></li>
+          <li><a href="#Device-ID-Intel-def.-">Device ID (Intel def.)</a></li>
+          <li><a href="#PCI-configuration-space-registers">PCI configuration space registers</a></li>
+          <li><a href="#PCI-matching-dictionary">PCI matching dictionary</a></li>
         </ol>
-      <li><a href="vmware.html#TOC-Real-KEXTs">Real KEXTs</a></li>
+      <li><a href="#Real-KEXTs">Real KEXTs</a></li>
         <ol>
-          <li><a href="vmware.html#TOC-w-o-KEXT">w/o KEXT</a></li>
-          <li><a href="vmware.html#TOC-AppleIntel8255x">AppleIntel8255x</a></li>
-          <li><a href="vmware.html#TOC-Intel82566MM">Intel82566MM</a></li>
-          <li><a href="vmware.html#TOC-AppleIntel8254XEthernet">AppleIntel8254XEthernet</a></li>
+          <li><a href="#w-o-KEXT">w/o KEXT</a></li>
+          <li><a href="#AppleIntel8255x">AppleIntel8255x</a></li>
+          <li><a href="#Intel82566MM">Intel82566MM</a></li>
+          <li><a href="#AppleIntel8254XEthernet">AppleIntel8254XEthernet</a></li>
         </ol>
-      <li><a href="vmware.html#TOC-a-KEXT-pseudo-life">a KEXT pseudo-life</a></li>
-      <li><a href="vmware.html#TOC-Host-NIC">Host NIC</a></li>
+      <li><a href="#a-KEXT-pseudo-life">a KEXT pseudo-life</a></li>
+      <li><a href="#Host-NIC">Host NIC</a></li>
     </ol>
-  <li><a href="vmware.html#TOC-Troubleshooting">Troubleshooting</a></li>
+  <li><a href="#Troubleshooting">Troubleshooting</a></li>
     <ol>
-      <li><a href="vmware.html#TOC-On-read-only-medium">On read-only medium</a></li>
-      <li><a href="vmware.html#TOC-Random-log">Random log</a></li>
+      <li><a href="#On-read-only-medium">On read-only medium</a></li>
+      <li><a href="#Random-log">Random log</a></li>
     </ol>
-  <li><a href="vmware.html#TOC-Resources">Resources</a></li>
+  <li><a href="#Resources">Resources</a></li>
 </ol>
 
 Running PureDarwin in VMware
@@ -88,13 +88,13 @@ a PureDarwin system (can be downloaded or produced)
     The resulting disk image will be read-write, and can be mounted by double-clicking so that you can change its contents from the host system:
     <span style="font-family:courier new,monospace;font-size:small;white-space:pre">qemu-img convert -O vmdk PureDarwin.iso PureDarwin.vmdk</span>
 
-Launch VMware Fusion 2.0 or later and create a new machine based on the ISO or .vmdk - VMware Fusion will automatically recognize it as "Mac OS X Server" and configure the virtual machine accordingly. You do not need to change any settings. 
-### Using VMware other than Fusion 
+Launch VMware Fusion 2.0 or later and create a new machine based on the ISO or .vmdk - VMware Fusion will automatically recognize it as "Mac OS X Server" and configure the virtual machine accordingly. You do not need to change any settings. 
+### Using VMware other than Fusion 
 Two KEXTs appeard useful for VMware release(s) other than Fusion:
 
 -   LegacyAppleIntelPIIXATA
 -   NullCPUPowerManagement
-They can be found in VMware-Drivers-OpenSource.zip. See [Downloads](../downloads.html) page.
+They can be found in VMware-Drivers-OpenSource.zip. See [Downloads](../downloads.html) page.
 
 Settings
 --------
@@ -169,9 +169,9 @@ VMware Fusion comes with a combo PhoenixBIOS/VMware BIOS.
 </span>
 <span style="font-size:small">pdisk reports:</span>
 <span style="font-size:small">Partition map (with 512 byte blocks) on 'original/darwin.iso'</span>
-<span style="font-size:small"> #:                type name                  length   base   ( size )</span>
-<span style="font-size:small"> 1: Apple_partition_map Apple                     63 @ 1     </span>
-<span style="font-size:small"> 2:           Apple_HFS DiscRecording 3.2.0f2   6940 @ 244    (  3.4M)</span>
+<span style="font-size:small"> #:                type name                  length   base   ( size )</span>
+<span style="font-size:small"> 1: Apple_partition_map Apple                     63 @ 1     </span>
+<span style="font-size:small"> 2:           Apple_HFS DiscRecording 3.2.0f2   6940 @ 244    (  3.4M)</span>
 <span style="font-size:small">
 </span>
 <span style="font-size:small">Device block size=2048, Number of Blocks=3339059200 (6.2T)</span>
@@ -179,8 +179,8 @@ VMware Fusion comes with a combo PhoenixBIOS/VMware BIOS.
 <span style="font-size:small">
 </span>
 <span style="font-size:small">The DFE bootloader:</span>
-<span style="font-size:small">-r--r--r--@ 1 201  wheel  63520 Jun 23 00:20 /Volumes/VMware Tools/.hiddendir/boot (dfeâ€™)</span>
-<span style="font-size:small">In order to compare the siwe, Chameleon takes 295328B and the latest DFE 63648B.</span>
+<span style="font-size:small">-r--r--r--@ 1 201  wheel  63520 Jun 23 00:20 /Volumes/VMware Tools/.hiddendir/boot (dfeâ€™)</span>
+<span style="font-size:small">In order to compare the siwe, Chameleon takes 295328B and the latest DFE 63648B.</span>
 <span style="font-size:small">
 </span>
 <span style="font-size:small">Facing the bootloader size limitation:</span>
@@ -213,45 +213,45 @@ Network
     **High performance (Gigabit), need VMware drivers in the guest.
     OK for production.
 -   **VLANCE (aka AMD PCNET-32)
-    **Lower perf, high CPU load, no kext available, problems solved. Update November 2012: A driver is in the works at <https://code.google.com/p/pcnet32-driver-for-puredarwin/> - **information about this driver still needs to be worked into this page**
+    **Lower perf, high CPU load, no kext available, problems solved. Update November 2012: A driver is in the works at <https://code.google.com/p/pcnet32-driver-for-puredarwin/> - **information about this driver still needs to be worked into this page**
 #### e1000
 VMware emulates an Intel e1000 network card.
-"e1000" is apparently a generic term for a <span style="font-weight:bold">series</span> of similar but different chips.
+"e1000" is apparently a generic term for a <span style="font-weight:bold">series</span> of similar but different chips.
 <http://www.intel.com/design/network/products/lan/controllers/82545.htm>
 
 <span style="font-family:courier new,monospace;font-size:x-small"></span>
 <span style="font-family:Arial,Verdana,sans-serif;font-size:16px;font-weight:bold"><span style="font-size:13px;font-weight:normal">From Intel:
-<span style="font-size:small">Stepping   Vendor ID   Device ID Description 
-82547EI-A0 8086h       1019h     Copper </span></span></span>
-<span style="font-family:Arial,Verdana,sans-serif;font-size:16px;font-weight:bold"><span style="font-size:13px;font-weight:normal"><span style="font-size:small">82547EI-A1 8086h       1019h     Copper 
-82547EI-B0 8086h       1019h     Copper 
-82547EI-B0 8086h       101Ah     Mobile 
-82547GI-B0 8086h       1019h     Copper 
-82546EB-A1 8086h       1010h     Copper; Dual Port MAC Default 
-82546EB-A1 8086h       1012h     Fiber; Dual Port 
-82546EB-A1 8086h       101Dh     Copper; Quad Port 
-82546GB-B0 8086h       1079h     Copper; Dual Port </span></span></span>
-<span style="font-family:Arial,Verdana,sans-serif;font-size:16px;font-weight:bold"><span style="font-size:13px;font-weight:normal"><span style="font-size:small">82546GB-B0 8086h       107Ah     Fiber; Dual Port 
-82546GB-B0 8086h       107Bh     SerDes; Dual Port </span></span></span>
-<span style="font-family:Arial,Verdana,sans-serif;font-size:16px;font-weight:bold"><span style="font-size:13px;font-weight:normal">**<span style="font-size:small">82545EM-A  8086h<span style="font-weight:normal">      <span style="font-weight:bold"> 100Fh     Copper </span></span></span>**</span></span>
-<span style="font-family:Arial,Verdana,sans-serif;font-size:16px;font-weight:bold"><span style="font-size:13px;font-weight:normal"><span style="font-size:small">82545EM-A  8086h       1011h     Fiber</span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82545GM-B  8086h       1026h     Copper MAC Default </span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82545GM-B  8086h       1027h     Fiber </span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82545GM-B  8086h       1028h     SerDes</span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82544EI-A4 8086h       1107h     Copper MAC Default </span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82544GC-A4 8086h       1112h     Copper MAC Default </span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82541EI-A0 8086h       1013h     Cooper MAC Default </span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82541EI-A0 8086h       1013h     Cooper MAC Default </span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82541EI-B0 8086h       1013h     Cooper MAC Default </span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82541EI-B0 8086h       1018h     Mobile</span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82541GI-B1 8086h       1076h     Cooper </span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82541GI-B1 8086h       1077h     Mobile </span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82541PI-C0 8086h       1076h     Cooper </span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82541ER-C0 8086h       1078h     Cooper </span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82540EP-A  8086h       1017      Desktop </span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82540EP-A  8086h       1016      Mobile </span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82540EM-A  8086h       100E      Desktop </span></span></span>
-<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82540EM-A  8086h       1015      Mobile </span></span></span>
+<span style="font-size:small">Stepping   Vendor ID   Device ID Description 
+82547EI-A0 8086h       1019h     Copper </span></span></span>
+<span style="font-family:Arial,Verdana,sans-serif;font-size:16px;font-weight:bold"><span style="font-size:13px;font-weight:normal"><span style="font-size:small">82547EI-A1 8086h       1019h     Copper 
+82547EI-B0 8086h       1019h     Copper 
+82547EI-B0 8086h       101Ah     Mobile 
+82547GI-B0 8086h       1019h     Copper 
+82546EB-A1 8086h       1010h     Copper; Dual Port MAC Default 
+82546EB-A1 8086h       1012h     Fiber; Dual Port 
+82546EB-A1 8086h       101Dh     Copper; Quad Port 
+82546GB-B0 8086h       1079h     Copper; Dual Port </span></span></span>
+<span style="font-family:Arial,Verdana,sans-serif;font-size:16px;font-weight:bold"><span style="font-size:13px;font-weight:normal"><span style="font-size:small">82546GB-B0 8086h       107Ah     Fiber; Dual Port 
+82546GB-B0 8086h       107Bh     SerDes; Dual Port </span></span></span>
+<span style="font-family:Arial,Verdana,sans-serif;font-size:16px;font-weight:bold"><span style="font-size:13px;font-weight:normal">**<span style="font-size:small">82545EM-A  8086h<span style="font-weight:normal">      <span style="font-weight:bold"> 100Fh     Copper </span></span></span>**</span></span>
+<span style="font-family:Arial,Verdana,sans-serif;font-size:16px;font-weight:bold"><span style="font-size:13px;font-weight:normal"><span style="font-size:small">82545EM-A  8086h       1011h     Fiber</span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82545GM-B  8086h       1026h     Copper MAC Default </span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82545GM-B  8086h       1027h     Fiber </span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82545GM-B  8086h       1028h     SerDes</span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82544EI-A4 8086h       1107h     Copper MAC Default </span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82544GC-A4 8086h       1112h     Copper MAC Default </span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82541EI-A0 8086h       1013h     Cooper MAC Default </span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82541EI-A0 8086h       1013h     Cooper MAC Default </span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82541EI-B0 8086h       1013h     Cooper MAC Default </span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82541EI-B0 8086h       1018h     Mobile</span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82541GI-B1 8086h       1076h     Cooper </span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82541GI-B1 8086h       1077h     Mobile </span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82541PI-C0 8086h       1076h     Cooper </span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82541ER-C0 8086h       1078h     Cooper </span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82540EP-A  8086h       1017      Desktop </span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82540EP-A  8086h       1016      Mobile </span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82540EM-A  8086h       100E      Desktop </span></span></span>
+<span style="font-weight:bold"><span style="font-weight:normal"><span style="font-size:small">82540EM-A  8086h       1015      Mobile </span></span></span>
 
 <span style="font-weight:bold"><span style="font-weight:normal"></span></span>
 ### Status
@@ -262,17 +262,17 @@ The VMware virtual device chipset seems to correspond to the Intel<span style="f
 -   **Primary device ID:** 0x100F
 
 
-Mac OS X contains a driver (AppleIntel8254XEthernet) for the chip emulated by VMware which "should match and work".
+Mac OS X contains a driver (AppleIntel8254XEthernet) for the chip emulated by VMware which "should match and work".
 **But** this driver is <span style="text-decoration:underline">not available</span> for Darwin yet, neither in source nor binary form.
 
-We found also two KEXTs close (but not enough "by nature") to the VMware <span style="font-family:arial,Verdana,sans-serif">82545EM virtual device:</span>
+We found also two KEXTs close (but not enough "by nature") to the VMware <span style="font-family:arial,Verdana,sans-serif">82545EM virtual device:</span>
 -   AppleIntel8255x (built from the [Darwinbuild](darwinbuild.html) project)
--   [82566mm-osx-driver](http://code.google.com/p/82566mm-osx-driver/) (an OpenSource one)
+-   [82566mm-osx-driver](http://code.google.com/p/82566mm-osx-driver/) (an OpenSource one)
 Both of the two KEXTs personality file (Info.plist) can be modified to match the VMware virtual device in order to be (kext)loaded at boot.
-**But no interface (e.g., en0) is affected...**
+**But no interface (e.g., en0) is affected...**
 
 
-The <span style="font-family:arial,Verdana,sans-serif">82566MM<span style="font-family:Arial,Verdana,sans-serif"> driver currently only supports<span style="border-collapse:separate;font-family:arial"> chips (e.g., 82566MM) which appear to be slightly different to the 82545EM that VMware apparently emulates.</span></span></span>
+The <span style="font-family:arial,Verdana,sans-serif">82566MM<span style="font-family:Arial,Verdana,sans-serif"> driver currently only supports<span style="border-collapse:separate;font-family:arial"> chips (e.g., 82566MM) which appear to be slightly different to the 82545EM that VMware apparently emulates.</span></span></span>
 e1000 support quest
 -------------------
 ### Notions
@@ -286,7 +286,7 @@ IOPCIDevice is a basic nub class representing any PCI device in any PCI slot.
 #### PCI matching summarization
 A driver can control a device on a PCI bus.
 A driver announces this fact by including a "*personality*" in its plist file.
-This personality includes IOProviderClass=IOPCIDevice (Key=Value).
+This personality includes IOProviderClass=IOPCIDevice (Key=Value).
 IOPCIDevice defines 2 sets of keys that a driver can use for matching:
 -   a key based on standard PCI registers
 -   a key based on Open Firmware (probably related to PPC only)
@@ -294,15 +294,15 @@ A PCI device driver can use one type of key or both of them (if personalities ar
 ### Vendor and Device IDs
 #### Vendor ID (intel def.)
 <span style="font-family:arial,sans-serif;font-size:small">This uniquely identifies all Intel PCI products.
-This field may be auto-loaded from the EEPROM at power on or upon the assertion of PCI_RST#.
-A value of 0x8086 is the default for this field upon power up if the EEPROM does not respond or is not programmed. </span>
+This field may be auto-loaded from the EEPROM at power on or upon the assertion of PCI_RST#.
+A value of 0x8086 is the default for this field upon power up if the EEPROM does not respond or is not programmed. </span>
 <span style="font-family:arial,sans-serif;font-size:small;font-weight:bold"></span>
 #### Device ID (Intel def.)
 <span style="font-weight:normal">This uniquely identifies the Ethernet controller.
-This field may be autoloaded from the EEPROM at power on or upon the assertion of RST#.
-The default value for this field is used upon power up if the EEPROM does not respond or is not programmed.</span>
+This field may be autoloaded from the EEPROM at power on or upon the assertion of RST#.
+The default value for this field is used upon power up if the EEPROM does not respond or is not programmed.</span>
 <span style="font-size:small"><span style="font-family:Arial,Verdana,sans-serif;font-size:13px"></span></span>
-#### PCI configuration space registers 
+#### PCI configuration space registers 
 
 -   vendor and device ID (offsets 0x00 and 0x002)
 -   subsystem vendor and device ID (offsets 0x2C and 0x2E)
@@ -312,7 +312,7 @@ The default value for this field is used upon power up if the EEPROM does not r
 #### PCI matching dictionary
 Value for a key can be a single register value or a list (space separator).
 Register values are little-endian hexa strings (device ID first then vendor ID).
-A mask can be included (only a part of the value is compared), bits set to 0 are ignored by the mask 
+A mask can be included (only a part of the value is compared), bits set to 0 are ignored by the mask 
 -   IOPCIMatch
     matches against primary vendor/device ID registers (checked first)
     or
@@ -335,7 +335,7 @@ Vendor ID: 0x8086
 Primary device ID: 0x1000 or 0x100F
 
 <span style="font-family:courier new,monospace;font-size:small">&lt;key&gt;IOPCIMatch&lt;/key&gt;</span>
-<span style="font-family:courier new,monospace;font-size:small"><span style="background-color:rgb(255,255,255)">&lt;string&gt;</span><span style="background-color:rgb(159,197,232)">0x10008086 0x100F8086&lt;/string&gt;</span></span>
+<span style="font-family:courier new,monospace;font-size:small"><span style="background-color:rgb(255,255,255)">&lt;string&gt;</span><span style="background-color:rgb(159,197,232)">0x10008086 0x100F8086&lt;/string&gt;</span></span>
 <span style="font-size:small">
 </span>
 
@@ -350,16 +350,16 @@ Class code for ethernet controller (0x0200 (in fact 4bytes, last byte ignored))
 <span style="font-family:courier new,monospace;font-size:small"><span style="background-color:rgb(255,255,255)">&lt;string&gt;</span><span style="background-color:rgb(180,167,214)">0x02000000&amp;0xffff0000</span><span style="background-color:rgb(255,255,255)">&lt;/string&gt;</span></span>
 <span style="font-size:small">
 </span>
-<span style="font-size:small">Consequently, the <span style="font-family:Arial,Verdana,sans-serif;font-size:13px">PCI ID associated to the 82545EM chipset should be "</span>100F:8086<span style="font-family:Arial,Verdana,sans-serif;font-size:13px">"</span></span>
+<span style="font-size:small">Consequently, the <span style="font-family:Arial,Verdana,sans-serif;font-size:13px">PCI ID associated to the 82545EM chipset should be "</span>100F:8086<span style="font-family:Arial,Verdana,sans-serif;font-size:13px">"</span></span>
 Which is confirmed on
--   **FreeBSD:** <span style="font-style:italic"><span style="font-size:small">100F8086</span> -&gt; 82545EM Gigabit ethernet controller Coper</span>
--   **GNU/Linux:** <span style="font-size:x-small"><span style="font-size:small">*pci 8086:100F kmod-e1000 *</span><span style="font-size:13px">*corresponds to e1000.ko*</span></span>
--   **Intel:** From the "*Intel PCI/PCI-X Family of Gigabit Ethernet Controllers Software Developerâ€™s Manual*", 
+-   **FreeBSD:** <span style="font-style:italic"><span style="font-size:small">100F8086</span> -&gt; 82545EM Gigabit ethernet controller Coper</span>
+-   **GNU/Linux:** <span style="font-size:x-small"><span style="font-size:small">*pci 8086:100F kmod-e1000 *</span><span style="font-size:13px">*corresponds to e1000.ko*</span></span>
+-   **Intel:** From the "*Intel PCI/PCI-X Family of Gigabit Ethernet Controllers Software Developerâ€™s Manual*", 
     A list of pair model / device id is available in the Intel spec, which confirm the result above ( "IOModel" = "82545EM Copper" )
 -   **e1000 from sourceforge:** *82540EP/EM, 82541xx, 82544GC/EI, 82545GM/EM, 82546GB/EB, and 82547xx*
     <http://kent.dl.sourceforge.net/sourceforge/e1000/OpenSDM_8254x-37.pdf>
 -   <http://www.pcidatabase.com/vendor_details.php?id=1302> also.
-<span style="font-size:small"><span style="font-size:x-small"><span style="font-size:13px"><span style="text-decoration:underline">Note:</span> "When running VMware ESX Server 3.0.0, you can experience a kernel panic if you use Intel e1000 network adapters with any of the following PCI IDs: </span><span style="font-size:13px">**0x100F**[...]" - <http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2221></span></span></span>
+<span style="font-size:small"><span style="font-size:x-small"><span style="font-size:13px"><span style="text-decoration:underline">Note:</span> "When running VMware ESX Server 3.0.0, you can experience a kernel panic if you use Intel e1000 network adapters with any of the following PCI IDs: </span><span style="font-size:13px">**0x100F**[...]" - <http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2221></span></span></span>
 ### Real KEXTs
 <span style="font-size:small"><span style="font-size:x-small"><span style="font-size:13px"></span></span></span>
 #### w/o KEXT
@@ -372,29 +372,29 @@ even the IOName and name are the only "ethernet" occurence found
 0x8086 is the vendor id
 
 
-<span style="font-size:x-small">    | |   |   +-o S2F0@1  &lt;class <span style="background-color:rgb(255,255,0)">IOPCIDevice</span>, registered, matched, active, busy 0, retain 6&gt;</span>
-<span style="font-size:x-small">    | |   |   |   {</span>
-<span style="font-size:x-small">    | |   |   |     "IOPCIResourced" = Yes</span>
-<span style="font-size:x-small">    | |   |   |     "IOInterruptControllers" = ("io-apic-0")</span>
-<span style="font-size:x-small">    | |   |   |     "IOName" = "<span style="background-color:rgb(255,255,0)">ethernet</span>"</span>
-<span style="font-size:x-small">    | |   |   |     "subsystem-id" = &lt;50070000&gt;</span>
-<span style="font-size:x-small">    | |   |   |     "IODeviceMemory" = (({"address"=18446744073048031232,"length"=131072}),({"address"=18446744073047900160,"le$</span>
-<span style="font-size:x-small">    | |   |   |     "class-code" = &lt;<span style="background-color:rgb(255,255,0)">00000200</span>&gt;</span>
-<span style="font-size:x-small">    | |   |   |     "IOPowerManagement" = {"CurrentPowerState"=2}</span>
-<span style="font-size:x-small">    | |   |   |     "revision-id" = &lt;01000000&gt;</span>
-<span style="font-size:x-small">    | |   |   |     "IOInterruptSpecifiers" = (&lt;1300000007000000&gt;)</span>
-<span style="font-size:x-small">    | |   |   |     "assigned-addresses" = &lt;1008028200000000000092d800000000000002001808028200000000000090d80000000000000100200$</span>
-<span style="font-size:x-small">    | |   |   |     "IOChildIndex" = 2</span>
-<span style="font-size:x-small">    | |   |   |     "built-in" = &lt;00&gt;</span>
-<span style="font-size:x-small">    | |   |   |     "acpi-device" = "IOACPIPlatformDevice is not serializable"</span>
-<span style="font-size:x-small">    | |   |   |     "device-id" = &lt;0f100000&gt;</span>
-<span style="font-size:x-small">    | |   |   |     "vendor-id" = &lt;<span style="background-color:rgb(255,255,0)">86800000</span>&gt;</span>
-<span style="font-size:x-small">    | |   |   |     "acpi-path" = "IOACPIPlane:/_SB/PCI0@0/P2P0@110000/S2F0@10000"</span>
-<span style="font-size:x-small">    | |   |   |     "subsystem-vendor-id" = &lt;ad150000&gt;</span>
-<span style="font-size:x-small">    | |   |   |     "name" = "<span style="background-color:rgb(255,255,0)">ethernet</span>"</span>
-<span style="font-size:x-small">    | |   |   |     "reg" = &lt;00080200000000000000000000000000000000001008020200000000000000000000000000000200180802020000000000$</span>
-<span style="font-size:x-small">    | |   |   |     "compatible" = &lt;"pci15ad,750","pci8086,100f","pciclass,020000"&gt;</span>
-<span style="font-size:x-small">    | |   |   |   }</span>
+<span style="font-size:x-small">    | |   |   +-o S2F0@1  &lt;class <span style="background-color:rgb(255,255,0)">IOPCIDevice</span>, registered, matched, active, busy 0, retain 6&gt;</span>
+<span style="font-size:x-small">    | |   |   |   {</span>
+<span style="font-size:x-small">    | |   |   |     "IOPCIResourced" = Yes</span>
+<span style="font-size:x-small">    | |   |   |     "IOInterruptControllers" = ("io-apic-0")</span>
+<span style="font-size:x-small">    | |   |   |     "IOName" = "<span style="background-color:rgb(255,255,0)">ethernet</span>"</span>
+<span style="font-size:x-small">    | |   |   |     "subsystem-id" = &lt;50070000&gt;</span>
+<span style="font-size:x-small">    | |   |   |     "IODeviceMemory" = (({"address"=18446744073048031232,"length"=131072}),({"address"=18446744073047900160,"le$</span>
+<span style="font-size:x-small">    | |   |   |     "class-code" = &lt;<span style="background-color:rgb(255,255,0)">00000200</span>&gt;</span>
+<span style="font-size:x-small">    | |   |   |     "IOPowerManagement" = {"CurrentPowerState"=2}</span>
+<span style="font-size:x-small">    | |   |   |     "revision-id" = &lt;01000000&gt;</span>
+<span style="font-size:x-small">    | |   |   |     "IOInterruptSpecifiers" = (&lt;1300000007000000&gt;)</span>
+<span style="font-size:x-small">    | |   |   |     "assigned-addresses" = &lt;1008028200000000000092d800000000000002001808028200000000000090d80000000000000100200$</span>
+<span style="font-size:x-small">    | |   |   |     "IOChildIndex" = 2</span>
+<span style="font-size:x-small">    | |   |   |     "built-in" = &lt;00&gt;</span>
+<span style="font-size:x-small">    | |   |   |     "acpi-device" = "IOACPIPlatformDevice is not serializable"</span>
+<span style="font-size:x-small">    | |   |   |     "device-id" = &lt;0f100000&gt;</span>
+<span style="font-size:x-small">    | |   |   |     "vendor-id" = &lt;<span style="background-color:rgb(255,255,0)">86800000</span>&gt;</span>
+<span style="font-size:x-small">    | |   |   |     "acpi-path" = "IOACPIPlane:/_SB/PCI0@0/P2P0@110000/S2F0@10000"</span>
+<span style="font-size:x-small">    | |   |   |     "subsystem-vendor-id" = &lt;ad150000&gt;</span>
+<span style="font-size:x-small">    | |   |   |     "name" = "<span style="background-color:rgb(255,255,0)">ethernet</span>"</span>
+<span style="font-size:x-small">    | |   |   |     "reg" = &lt;00080200000000000000000000000000000000001008020200000000000000000000000000000200180802020000000000$</span>
+<span style="font-size:x-small">    | |   |   |     "compatible" = &lt;"pci15ad,750","pci8086,100f","pciclass,020000"&gt;</span>
+<span style="font-size:x-small">    | |   |   |   }</span>
 
 #### AppleIntel8255x
 <div style="display:block">
@@ -482,31 +482,31 @@ In the FreeBSD src code:
 
 /**
 
- *  e1000_read_mac_addr_82540 - Read device MAC address
+ *  e1000_read_mac_addr_82540 - Read device MAC address
 
- *  @hw: pointer to the HW structure
+ *  @hw: pointer to the HW structure
 
- *
+ *
 
- *  Reads the device MAC address from the EEPROM and stores the value.
+ *  Reads the device MAC address from the EEPROM and stores the value.
 
- *  Since devices with two ports use the same EEPROM, we increment the
+ *  Since devices with two ports use the same EEPROM, we increment the
 
- *  last bit in the MAC address for the second port.
+ *  last bit in the MAC address for the second port.
 
- *
+ *
 
- *  This version is being used over generic because of customer issues
+ *  This version is being used over generic because of customer issues
 
- *  with VmWare and Virtual Box when using generic. It seems in
+ *  with VmWare and Virtual Box when using generic. It seems in
 
- *  the emulated 82545, RAR[0] does NOT have a valid address after a
+ *  the emulated 82545, RAR[0] does NOT have a valid address after a
 
- *  reset, this older method works and using this breaks nothing for
+ *  reset, this older method works and using this breaks nothing for
 
- *  these legacy adapters.
+ *  these legacy adapters.
 
- **/
+ **/
 
 
 
@@ -580,23 +580,23 @@ In the FreeBSD src code:
 <div style="display:block">
 <span style="font-size:x-small">kextload: sending personalities to kernel:</span>
 <div style="display:block">
-<span style="font-size:x-small">kextload:     from extension /System/Library/Extensions/IONetworkingFamily.kext:</span>
+<span style="font-size:x-small">kextload:     from extension /System/Library/Extensions/IONetworkingFamily.kext:</span>
 <div style="display:block">
-<span style="font-size:x-small">kextload:         IONetworkStack</span>
+<span style="font-size:x-small">kextload:         IONetworkStack</span>
 <div style="display:block">
-<span style="font-size:x-small">kextload:         Kernel Debugging Driver</span>
+<span style="font-size:x-small">kextload:         Kernel Debugging Driver</span>
 <div style="display:block">
-<span style="font-size:x-small">kextload:     from extension /System/Library/Extensions/IOPCIFamily.kext:</span>
+<span style="font-size:x-small">kextload:     from extension /System/Library/Extensions/IOPCIFamily.kext:</span>
 <div style="display:block">
-<span style="font-size:x-small">kextload:         IOPCI2PCIBridge-Name</span>
+<span style="font-size:x-small">kextload:         IOPCI2PCIBridge-Name</span>
 <div style="display:block">
-<span style="font-size:x-small">kextload:         IOPCI2PCIBridge-i386</span>
+<span style="font-size:x-small">kextload:         IOPCI2PCIBridge-i386</span>
 <div style="display:block">
-<span style="font-size:x-small">kextload:         IOPCI2PCIBridge-PCI</span>
+<span style="font-size:x-small">kextload:         IOPCI2PCIBridge-PCI</span>
 <div style="display:block">
-<span style="font-size:x-small">kextload:     from extension /System/Library/Extensions/IONetworkingFamily.kext/Contents/PlugIns/Intel82566MM.kext:</span>
+<span style="font-size:x-small">kextload:     from extension /System/Library/Extensions/IONetworkingFamily.kext/Contents/PlugIns/Intel82566MM.kext:</span>
 <div style="display:block">
-<span style="font-size:x-small">kextload:         Intel82566MM</span>
+<span style="font-size:x-small">kextload:         Intel82566MM</span>
 <div style="display:block">
 <span style="font-size:x-small">kextload: sending 6 personalities to the kernel</span>
 <div style="display:block">
@@ -609,7 +609,7 @@ Cannot be redistributed as binary form.
 Load, match and work (interface en0 is affected, network is functional).
 
 
-<span style="font-size:small">1017-Jul 12 19:25:51 PureDarwin kernel[0]: Ethernet [Intel8254X]: Link down on en0 called by disable() -- </span>
+<span style="font-size:small">1017-Jul 12 19:25:51 PureDarwin kernel[0]: Ethernet [Intel8254X]: Link down on en0 called by disable() -- </span>
 <span style="font-size:small">1018-Jul 12 19:25:51 PureDarwin kernel[0]: Can't unload com.apple.driver.AppleIntel8254XEthernet due to -</span>
 <span style="font-size:small">1019:Jul 12 19:26:28 PureDarwin kernel[0]: venderid: 0x8086 deviceid: 0x100f.</span>
 <span style="font-size:small">1020-Jul 12 19:26:28 PureDarwin kernel[0]: AppleIntel8254XEthernet: Ethernet address 00:0c:29:69:17:26</span>
@@ -653,95 +653,95 @@ Values found (non exhaustive) interesting have been highlighted.
 
 
 <span style="font-size:x-small"></span>
-    | |   |   +-o S2F0@1  &lt;class IOPCIDevice, registered, matched, active, busy 0, retain 9&gt;
-    | |   |   | | {
-    | |   |   | |   "IOPCIResourced" = Yes
-    | |   |   | |   "IOInterruptControllers" = ("io-apic-0")
-    | |   |   | |   "IOName" = "ethernet"
-    | |   |   | |   "subsystem-id" = &lt;50070000&gt;
-    | |   |   | |   "IODeviceMemory" = (({"address"=18446744073048031232,"length"=131072}),({"address"=18446744073047900160,"le$
-    | |   |   | |   "IOPMPCIConfigSpaceVolatile" = No
-    | |   |   | |   "class-code" = &lt;00000200&gt;
-    | |   |   | |   "EEPROM Version" = "0.0"
-    | |   |   | |   "IOPowerManagement" = {"ChildrenPowerState"=2,"CurrentPowerState"=2}
-    | |   |   | |   "revision-id" = &lt;01000000&gt;
-    | |   |   | |   "IOInterruptSpecifiers" = (&lt;1300000007000000&gt;)
-    | |   |   | |   "assigned-addresses" = &lt;1008028200000000000092d800000000000002001808028200000000000090d80000000000000100200$
-    | |   |   | |   "IOChildIndex" = 2
-    | |   |   | |   "built-in" = &lt;00&gt;
-    | |   |   | |   "acpi-device" = "IOACPIPlatformDevice is not serializable"
-    | |   |   | |  <span style="background-color:rgb(255,255,0)"> "</span><span style="background-color:rgb(255,255,0)">device-id" = &lt;0f100000&gt; </span>
-    | |   |   | |  <span style="background-color:rgb(255,255,0)"> "vendor-id" = &lt;86800000&gt; </span>
-    | |   |   | |   "acpi-path" = "IOACPIPlane:/_SB/PCI0@0/P2P0@110000/S2F0@10000"
-    | |   |   | |   "subsystem-vendor-id" = &lt;ad150000&gt;
-    | |   |   | |   "name" = "ethernet"
-    | |   |   | |   "EEPROM Checksum Valid" = Yes
-    | |   |   | |   "reg" = &lt;00080200000000000000000000000000000000001008020200000000000000000000000000000200180802020000000000$
-    | |   |   | |   "compatible" = &lt;"pci15ad,750","pci8086,100f","pciclass,020000"&gt;
-    | |   |   | | }
-    | |   |   | | 
-    | |   |   | +-o AppleIntel8254XEthernet  &lt;class AppleIntel8254XEthernet, !registered, !matched, active, busy 0, retain 6&gt;
-    | |   |   |   | {
-    | |   |   |   |   "IOProbeScore" = 10000
-    | |   |   |   |   "Driver Parameters" = {"TxQueueSize"=4096,"RxAbsoluteTimer1000"=64,"Offload TCP/IP Checksum"=Yes,"EnableL$
-    | |   |   |   |  <span style="background-color:rgb(234,153,153)"> "CFBundleIdentifier" = "com.apple.driver.AppleIntel8254XEthernet" </span>
-    | |   |   |   |  <span style="background-color:rgb(182,215,168)"> "IODefaultMedium" = "00000020" </span>
-    | |   |   |   |   "IOSelectedMedium" = "00000020"
-    | |   |   |   |   "IOMatchCategory" = "IODefaultMatchCategory"
-    | |   |   |   |   "IOLinkSpeed" = 1000000000
-    | |   |   |   |   "IOPowerManagement" = {"CurrentPowerState"=1}
-    | |   |   |   |   "IOVendor" = "Intel"
-    | |   |   |   |   "IOPacketFilters" = {"IONetworkFilterGroup"=275,"IOEthernetWakeOnLANFilterGroup"=0}
-    | |   |   |   |   "IOMACAddress" = &lt;000c29691726&gt;
-    | |   |   |   |  <span style="background-color:rgb(162,196,201)"> "IOProviderClass" = "IOPCIDevice" </span>
-    | |   |   |   |   "IOFeatures" = 10
-    | |   |   |   |  <span style="background-color:rgb(180,167,214)"> "IOPCIClassMatch" = "0x02000000&0xffff0000" </span>
-    | |   |   |   |   "IOLinkStatus" = 3
-    | |   |   |   |   "IOMaxPacketSize" = 9018
-    | |   |   |   |   "IOMinPacketSize" = 64
-    | |   |   |   |   "IOMediumDictionary" = {"00500023"={"Type"=5242915,"Index"=6,"Flags"=0,"Speed"=10000000},"00100026"={"Typ$
-    | |   |   |   |  <span style="background-color:rgb(159,197,232)"> "IOPCIPrimaryMatch" = "0x10008086&0x0000ffff" </span>
-    | |   |   |   |  <span style="background-color:rgb(255,255,0)"> "IOModel" = "82545EM Copper" </span>
-    | |   |   |   |  <span style="background-color:rgb(213,166,189)"> "IOClass" = "AppleIntel8254XEthernet" </span>
-    | |   |   |   |   "IOActiveMedium" = "00100030"
-    | |   |   |   |   "EN Number" = 0
-    | |   |   |   | }
-    | |   |   |   | 
-    | |   |   |   +-o IOEthernetInterface  &lt;class IOEthernetInterface, registered, matched, active, busy 0, retain 10&gt;
-    | |   |   |     | {
-    | |   |   |     |   "IOMediaAddressLength" = 6
-    | |   |   |     |   "IOPrimaryInterface" = Yes
-    | |   |   |     |   "IOInterfaceType" = 6
-    | |   |   |     |   "IORequiredPacketFilters" = {"IONetworkFilterGroup"=19,"IOEthernetWakeOnLANFilterGroup"=0}
-    | |   |   |     |   "IOInterfaceFlags" = 34915
-    | |   |   |     |   "IOInterfaceExtraFlags" = 1073744192
-    | |   |   |     |   "IOInterfaceUnit" = 0
-    | |   |   |     |   "IONetworkData" = {"IOEthernetStatsKey"={"Size"=216,"Data"=&lt;0000000000000000000000000000000000000000000$
-    | |   |   |     |   "BSD Name" = "en0"
-    | |   |   |     |   "IOLocation" = ""
-    | |   |   |     |   "IOMaxTransferUnit" = 1500
-    | |   |   |     |   "IOInterfaceNamePrefix" = "en"
-    | |   |   |     |   "IOBuiltin" = Yes
-    | |   |   |     |   "IOActivePacketFilters" = {"IONetworkFilterGroup"=19,"IOEthernetWakeOnLANFilterGroup"=0}
-    | |   |   |     |   "IOMulticastAddressList" = &lt;01005e0000fb01005e0000013333000000fb33333e2cf1a83333000000013333ff691726&gt;
-    | |   |   |     |   "IOInterfaceState" = 3
-    | |   |   |     |   "IOMediaHeaderLength" = 14
-    | |   |   |     |   "IOControllerEnabled" = Yes
-    | |   |   |     | }
-    | |   |   |     | 
-    | |   |   |     +-o IONetworkStack  &lt;class IONetworkStack, registered, matched, active, busy 0, retain 7&gt;
-    | |   |   |       | {
-    | |   |   |       |   "IOProviderClass" = "IOResources"
-    | |   |   |       |   "IOMatchCategory" = "IONetworkStack"
-    | |   |   |       |   "IOProbeScore" = 0
-    | |   |   |       |   "IOClass" = "IONetworkStack"
-    | |   |   |       |   "CFBundleIdentifier" = "com.apple.iokit.IONetworkingFamily"
-    | |   |   |       |   "IOResourceMatch" = "IOBSD"
-    | |   |   |       | }
-    | |   |   |       | 
-    | |   |   |       +-o IONetworkStackUserClient  &lt;class IONetworkStackUserClient, !registered, !matched, active, busy 0, ret$
-    | |   |   |           {
-    | |   |   |           }
+    | |   |   +-o S2F0@1  &lt;class IOPCIDevice, registered, matched, active, busy 0, retain 9&gt;
+    | |   |   | | {
+    | |   |   | |   "IOPCIResourced" = Yes
+    | |   |   | |   "IOInterruptControllers" = ("io-apic-0")
+    | |   |   | |   "IOName" = "ethernet"
+    | |   |   | |   "subsystem-id" = &lt;50070000&gt;
+    | |   |   | |   "IODeviceMemory" = (({"address"=18446744073048031232,"length"=131072}),({"address"=18446744073047900160,"le$
+    | |   |   | |   "IOPMPCIConfigSpaceVolatile" = No
+    | |   |   | |   "class-code" = &lt;00000200&gt;
+    | |   |   | |   "EEPROM Version" = "0.0"
+    | |   |   | |   "IOPowerManagement" = {"ChildrenPowerState"=2,"CurrentPowerState"=2}
+    | |   |   | |   "revision-id" = &lt;01000000&gt;
+    | |   |   | |   "IOInterruptSpecifiers" = (&lt;1300000007000000&gt;)
+    | |   |   | |   "assigned-addresses" = &lt;1008028200000000000092d800000000000002001808028200000000000090d80000000000000100200$
+    | |   |   | |   "IOChildIndex" = 2
+    | |   |   | |   "built-in" = &lt;00&gt;
+    | |   |   | |   "acpi-device" = "IOACPIPlatformDevice is not serializable"
+    | |   |   | |  <span style="background-color:rgb(255,255,0)"> "</span><span style="background-color:rgb(255,255,0)">device-id" = &lt;0f100000&gt; </span>
+    | |   |   | |  <span style="background-color:rgb(255,255,0)"> "vendor-id" = &lt;86800000&gt; </span>
+    | |   |   | |   "acpi-path" = "IOACPIPlane:/_SB/PCI0@0/P2P0@110000/S2F0@10000"
+    | |   |   | |   "subsystem-vendor-id" = &lt;ad150000&gt;
+    | |   |   | |   "name" = "ethernet"
+    | |   |   | |   "EEPROM Checksum Valid" = Yes
+    | |   |   | |   "reg" = &lt;00080200000000000000000000000000000000001008020200000000000000000000000000000200180802020000000000$
+    | |   |   | |   "compatible" = &lt;"pci15ad,750","pci8086,100f","pciclass,020000"&gt;
+    | |   |   | | }
+    | |   |   | | 
+    | |   |   | +-o AppleIntel8254XEthernet  &lt;class AppleIntel8254XEthernet, !registered, !matched, active, busy 0, retain 6&gt;
+    | |   |   |   | {
+    | |   |   |   |   "IOProbeScore" = 10000
+    | |   |   |   |   "Driver Parameters" = {"TxQueueSize"=4096,"RxAbsoluteTimer1000"=64,"Offload TCP/IP Checksum"=Yes,"EnableL$
+    | |   |   |   |  <span style="background-color:rgb(234,153,153)"> "CFBundleIdentifier" = "com.apple.driver.AppleIntel8254XEthernet" </span>
+    | |   |   |   |  <span style="background-color:rgb(182,215,168)"> "IODefaultMedium" = "00000020" </span>
+    | |   |   |   |   "IOSelectedMedium" = "00000020"
+    | |   |   |   |   "IOMatchCategory" = "IODefaultMatchCategory"
+    | |   |   |   |   "IOLinkSpeed" = 1000000000
+    | |   |   |   |   "IOPowerManagement" = {"CurrentPowerState"=1}
+    | |   |   |   |   "IOVendor" = "Intel"
+    | |   |   |   |   "IOPacketFilters" = {"IONetworkFilterGroup"=275,"IOEthernetWakeOnLANFilterGroup"=0}
+    | |   |   |   |   "IOMACAddress" = &lt;000c29691726&gt;
+    | |   |   |   |  <span style="background-color:rgb(162,196,201)"> "IOProviderClass" = "IOPCIDevice" </span>
+    | |   |   |   |   "IOFeatures" = 10
+    | |   |   |   |  <span style="background-color:rgb(180,167,214)"> "IOPCIClassMatch" = "0x02000000&0xffff0000" </span>
+    | |   |   |   |   "IOLinkStatus" = 3
+    | |   |   |   |   "IOMaxPacketSize" = 9018
+    | |   |   |   |   "IOMinPacketSize" = 64
+    | |   |   |   |   "IOMediumDictionary" = {"00500023"={"Type"=5242915,"Index"=6,"Flags"=0,"Speed"=10000000},"00100026"={"Typ$
+    | |   |   |   |  <span style="background-color:rgb(159,197,232)"> "IOPCIPrimaryMatch" = "0x10008086&0x0000ffff" </span>
+    | |   |   |   |  <span style="background-color:rgb(255,255,0)"> "IOModel" = "82545EM Copper" </span>
+    | |   |   |   |  <span style="background-color:rgb(213,166,189)"> "IOClass" = "AppleIntel8254XEthernet" </span>
+    | |   |   |   |   "IOActiveMedium" = "00100030"
+    | |   |   |   |   "EN Number" = 0
+    | |   |   |   | }
+    | |   |   |   | 
+    | |   |   |   +-o IOEthernetInterface  &lt;class IOEthernetInterface, registered, matched, active, busy 0, retain 10&gt;
+    | |   |   |     | {
+    | |   |   |     |   "IOMediaAddressLength" = 6
+    | |   |   |     |   "IOPrimaryInterface" = Yes
+    | |   |   |     |   "IOInterfaceType" = 6
+    | |   |   |     |   "IORequiredPacketFilters" = {"IONetworkFilterGroup"=19,"IOEthernetWakeOnLANFilterGroup"=0}
+    | |   |   |     |   "IOInterfaceFlags" = 34915
+    | |   |   |     |   "IOInterfaceExtraFlags" = 1073744192
+    | |   |   |     |   "IOInterfaceUnit" = 0
+    | |   |   |     |   "IONetworkData" = {"IOEthernetStatsKey"={"Size"=216,"Data"=&lt;0000000000000000000000000000000000000000000$
+    | |   |   |     |   "BSD Name" = "en0"
+    | |   |   |     |   "IOLocation" = ""
+    | |   |   |     |   "IOMaxTransferUnit" = 1500
+    | |   |   |     |   "IOInterfaceNamePrefix" = "en"
+    | |   |   |     |   "IOBuiltin" = Yes
+    | |   |   |     |   "IOActivePacketFilters" = {"IONetworkFilterGroup"=19,"IOEthernetWakeOnLANFilterGroup"=0}
+    | |   |   |     |   "IOMulticastAddressList" = &lt;01005e0000fb01005e0000013333000000fb33333e2cf1a83333000000013333ff691726&gt;
+    | |   |   |     |   "IOInterfaceState" = 3
+    | |   |   |     |   "IOMediaHeaderLength" = 14
+    | |   |   |     |   "IOControllerEnabled" = Yes
+    | |   |   |     | }
+    | |   |   |     | 
+    | |   |   |     +-o IONetworkStack  &lt;class IONetworkStack, registered, matched, active, busy 0, retain 7&gt;
+    | |   |   |       | {
+    | |   |   |       |   "IOProviderClass" = "IOResources"
+    | |   |   |       |   "IOMatchCategory" = "IONetworkStack"
+    | |   |   |       |   "IOProbeScore" = 0
+    | |   |   |       |   "IOClass" = "IONetworkStack"
+    | |   |   |       |   "CFBundleIdentifier" = "com.apple.iokit.IONetworkingFamily"
+    | |   |   |       |   "IOResourceMatch" = "IOBSD"
+    | |   |   |       | }
+    | |   |   |       | 
+    | |   |   |       +-o IONetworkStackUserClient  &lt;class IONetworkStackUserClient, !registered, !matched, active, busy 0, ret$
+    | |   |   |           {
+    | |   |   |           }
 
 
 
@@ -780,10 +780,10 @@ The driver inspects and configure the PCI Device
 Pseudo-pre-deduction: If the kext is loaded but no interface, could it be?:
 <span style="font-family:Lucida Grande,Geneva,Helvetica,Arial,sans-serif;font-size:12px"></span>
 `start`{style="font-size:11px;font-family:Monaco,Courier,Consolas,monospace"}
-:   The `start`{style="font-size:11px;font-family:Monaco,Courier,Consolas,monospace"} function should initialize the device to a working state. It also needs to create a network object and make it visible to the networking stack as an interface
+:   The `start`{style="font-size:11px;font-family:Monaco,Courier,Consolas,monospace"} function should initialize the device to a working state. It also needs to create a network object and make it visible to the networking stack as an interface
     
     
-network driver's <span style="font-size:small">start</span> function:
+network driver's <span style="font-size:small">start</span> function:
 -   set network interface object
 -   a work loop
 -   an output queue
@@ -807,8 +807,8 @@ Troubleshooting
 ---------------
 ### On read-only medium
 The tty is flooded with log telling attempt to write on a read-only medium (ie: auth mechanism too) does not work.
-<span style="font-weight:bold"><span style="color:rgb(255,0,0)">Shadow read-Write support is needed</span>.</span> Another obvious implicit goal is to install PureDarwin with PureDarwin.
-<span style="font-weight:bold">FIXME: <span style="font-weight:normal">It will probably use <span style="font-style:italic">/usr/libexec/vndevice</span> with a shadow file and some node in <span style="font-style:italic">/dev/vn*</span>.</span></span>
+<span style="font-weight:bold"><span style="color:rgb(255,0,0)">Shadow read-Write support is needed</span>.</span> Another obvious implicit goal is to install PureDarwin with PureDarwin.
+<span style="font-weight:bold">FIXME: <span style="font-weight:normal">It will probably use <span style="font-style:italic">/usr/libexec/vndevice</span> with a shadow file and some node in <span style="font-style:italic">/dev/vn*</span>.</span></span>
 ### Random log
 <span style="font-family:courier new,monospace"><span style="font-size:small">Aug 28 18:58:15.129: vmx| Licensecheck: Invalid license file.</span></span>
 <span style="font-family:courier new,monospace"><span style="font-size:small">Aug 28 18:58:15.131: vmx| Host: SRAT tables not found in memory</span></span>
@@ -827,7 +827,7 @@ The tty is flooded with log telling attempt to write on a read-only medium (ie: 
 <span style="font-family:courier new,monospace"><span style="font-size:small">
 </span></span>
 
-<span style="font-family:courier new,monospace"><span style="font-size:small">Sep 27 11:52:17.727: vmx| Error: Encountered Apple bug #5202831.  Disconnecting.</span></span>
+<span style="font-family:courier new,monospace"><span style="font-size:small">Sep 27 11:52:17.727: vmx| Error: Encountered Apple bug #5202831.  Disconnecting.</span></span>
 <span style="font-family:courier new,monospace"><span style="font-size:small">
 </span></span>
 
@@ -840,7 +840,7 @@ http://www.intel.com/design/network/products/lan/docs/82545.htm
 http://download.intel.com/design/network/manuals/8254x_GBe_SDM.pdf
 
 http://downloadcenter.intel.com/Detail_Desc.aspx?agr=Y&ProductID=990&DwnldID=3294&strOSs=52&OSFullName=FreeBSD*&lang=eng
-<span style="font-family:Arial,sans-serif;font-size:small;color:rgb(85,85,85)">FreeBSD* 4.7 to 4.10 driver for all Intel® PRO/1000 gigabit Ethernet adapters. Valid for the 82540, 82542, 82543, 82544, **82545**, 82546 and 82547 controllers. 
+<span style="font-family:Arial,sans-serif;font-size:small;color:rgb(85,85,85)">FreeBSD* 4.7 to 4.10 driver for all Intel® PRO/1000 gigabit Ethernet adapters. Valid for the 82540, 82542, 82543, 82544, **82545**, 82546 and 82547 controllers. 
 </span>
 
 http://developer.apple.com/documentation/DeviceDrivers/Conceptual/NetworkDriver/1_Intro/Intro.html
@@ -853,7 +853,4 @@ http://developer.apple.com/documentation/DeviceDrivers/Conceptual/NetworkDriver/
 <http://developer.apple.com/documentation/DeviceDrivers/Conceptual/WritingPCIDrivers/pci_device/pci_device.html>
 <http://download.intel.com/design/network/manuals/8255X_OpenSDM.pdf>
 
-<https://code.google.com/p/pcnet32-driver-for-puredarwin/> - **information about this driver still needs to be worked into this page**
-
-
-
+<https://code.google.com/p/pcnet32-driver-for-puredarwin/> - **information about this driver still needs to be worked into this page**
