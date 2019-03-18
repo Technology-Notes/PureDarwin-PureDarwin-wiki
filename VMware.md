@@ -31,7 +31,7 @@ Contents<br>
       <li><a href="#VMware-Fusion-BIOS">VMware Fusion BIOS</a></li>
       <li><a href="#Bootloader">Bootloader</a></li>
         <ol>
-          <li><a href="#darwin.iso">darwin.iso</a></li>
+          <li><a href="#darwiniso">darwin.iso</a></li>
         </ol>
       <li><a href="#Single-user-mode">Single user mode</a></li>
       <li><a href="#Multi-user-mode">Multi user mode</a></li>
@@ -53,8 +53,8 @@ Contents<br>
         </ol>
       <li><a href="">Vendor and Device IDs</a></li>
         <ol>
-          <li><a href="#Vendor-ID-intel-def.-">Vendor ID (intel def.)</a></li>
-          <li><a href="#Device-ID-Intel-def.-">Device ID (Intel def.)</a></li>
+          <li><a href="#Vendor-ID-intel-def">Vendor ID (intel def.)</a></li>
+          <li><a href="#Device-ID-Intel-def">Device ID (Intel def.)</a></li>
           <li><a href="#PCI-configuration-space-registers">PCI configuration space registers</a></li>
           <li><a href="#PCI-matching-dictionary">PCI matching dictionary</a></li>
         </ol>
