@@ -209,8 +209,10 @@ The command above should download the .plist files (it will run nfsd if it is no
     Downloading http://svn.macosforge.org/repository/darwinbuild/trunk/plists//9A581.plist ...
     Download complete
     Initialization Complete
-    If you get ".build/9F33.plist: No such file or directory", it can be necessary to repeat this step.
-    As a result, you should now have inside the current working directory:
+
+If you get ".build/9F33.plist: No such file or directory", it can be necessary to repeat this step.
+As a result, you should now have inside the current working directory:
+
     ./.build
     ./.build/9A581.plist
     ./.build/9B18.plist
@@ -228,8 +230,10 @@ The command above should download the .plist files (it will run nfsd if it is no
     ./Roots
     ./Sources
     ./Symbols
-    Whenever there are new Darwin projects or versions, you should do darwinbuild -init again in order to refresh the .plist files (think of it as "apt-get update" for Darwin source projects).
-    Notes: Keep in mind that/etc/exports must be cleaned sometimes, since there is no concept of "uninitializing" (implicitly removing the added line from /etc/exports). An example of what is added:
+
+ Whenever there are new Darwin projects or versions, you should do darwinbuild -init again in order to refresh the .plist files (think of it as "apt-get update" for Darwin source projects).  
+Notes: Keep in mind that/etc/exports must be cleaned sometimes, since there is no concept of "uninitializing" (implicitly removing the added line from /etc/exports). An example of what is added:
+
     # Added by darwinbuild on 20090523154428
     /Users/aladin/PureDarwin/darwinbuild/9J61/.build/buildroot.nfs -maproot=0:10
 
