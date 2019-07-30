@@ -4,14 +4,13 @@ This page is about running PureDarwin on the QEMU emulator and is <span style="
 
 [QEMU](http://en.wikipedia.org/wiki/QEMU) is a hardware emulator that can be used to run operating systems on virtualized hardware, not unlike VMware or Parallels. It is an open source project.
 The ability to run PureDarwin on emulated hardware can be very useful, especially for development, testing and debugging.
-**
-<span style="color:rgb(255,0,0)">If you get the "Error parsing plist file", then you need to increase the amount of virtual RAM. At least 330 MB seem to be required. If the kernel just crashes and the boot prompt appears again, press F8 and enter mach_kernel.voodoo &lt;enter&gt;.</span>**
+**<span style="color:rgb(255,0,0)">If you get the "Error parsing plist file", then you need to increase the amount of virtual RAM. At least 330 MB seem to be required. If the kernel just crashes and the boot prompt appears again, press F8 and enter mach_kernel.voodoo &lt;enter&gt;.</span>**
 
-
+<!--
 <div class="sites-embed-align-left-wrapping-off">
 <div class="sites-embed-border-off sites-embed" style="width:250px;">
 <div class="sites-embed-content sites-embed-type-toc">
-<div class="goog-toc sites-embed-toc-maxdepth-6">
+<div class="goog-toc sites-embed-toc-maxdepth-6">-->
 Contents
 1.  [**1** Running PureDarwin Xmas on QEMU](qemu.html#TOC-Running-PureDarwin-Xmas-on-QEMU)
     1.  [**1.1** On Linux hosts](qemu.html#TOC-On-Linux-hosts)
@@ -145,6 +144,7 @@ Here is a list of potential devices found in a QEMU guest OS.
 "0x10EC","0x8139","Realtek Semiconductor","RTL-8139/8139C/8139C","Realtek RTL8139 Family PCI Fast Ethernet NIC"
 "0x8086","0x7010","Intel Corporation","82371SB","PIIX3 IDE Interface (Triton II)"
 "0x8086","0x1237","Intel Corporation","82440LX/EX","PCI & Memory"
+
 QEMU network
 ------------
 The dawn of networking support in PureDarwin finally appears with QEMU.
@@ -156,70 +156,45 @@ It also acts as a proxy between the qemu process and the target process, with tc
 
 <span style="text-decoration:underline">Credits:</span> Partial network support already existed, thanks to "hingwah" who helped and pointed its existence to us.
 
-<div style="display:block">
 As said in [3.7.3 Using the user mode network stack](http://www.qemu.org/qemu-doc.html#SEC3) QEMU documentation ("*The DHCP server assign addresses to the hosts starting from 10.0.2.15.*"), the interface is well auto-assigned (notes: KernelEventMonitor (confid_plugins) has been added and seems to be responsible of the client DHCP capability) as the route to the virtual available gateway (a firewall / dhcp server).
 
-<div style="display:block">
 ### Requirements
-<div style="display:block">
 Append -net user if it is not already there to the qemu command line:
-<div style="display:block">
 <span style="font-size:small">[...] -net nic,model={i82551|i82557b|rtl8139} -no-kvm-irqchip -net user [...]</span>
-<div style="display:block">
 
-<div style="display:block">
 <span style="text-decoration:line-through">Be prepare to ping the gateway continuously, it's a workaround.</span>
-<div style="display:block">
 As user inp reported on #puredarwin, adding '-no-kvm-irqchip' to the qemu call solves this issue with the rtl8139 driver.
-<div style="display:block">
 
-<div style="display:block">
 Of course, it's mandatory to have a Kernel EXTension matching its respective device.
-<div style="display:block">
+
 E.g. below with the realtek kext matching its respective virtual RTL8139 device in QEMU:
-<div style="display:block">
 
-<div style="display:block">
 [![](../_/rsrc/1246698469464/developers/qemu/guest%20ip%20auto%20set.png%3Fheight=223&width=420)](qemu/guest%20ip%20auto%20set.png%3Fattredirects=0)
-### DHCP (IPv4)
-<div style="display:block">
-An example of a "correct" configuration, where everything has been provided automatically (KernelEventMonitor) via DHCP.
-<div style="display:block">
-[![](../_/rsrc/1246830041720/developers/qemu/qemunusermodenetworkstacksupport.png)](qemu/qemunusermodenetworkstacksupport.png%3Fattredirects=0)
-<div style="display:block">
-<div style="display:block">
-**
-**
-<div style="display:block">
-**What expected:**
-<div style="display:block">
-10.0.2.2 should respond to ping (gateway firewall/dhcpd).
-<div style="display:block">
-10.0.2.2 should be the default route.
-<div style="display:block">
-10.0.2.3 should answer to DNS query.
-<div style="display:block">
-10.0.2.4 should answer to SMB (if available).
-<div style="display:block">
-10.0.2.15 is where starts the first guest ip address.
-<div style="display:block">
 
-<div style="display:block">
+### DHCP (IPv4)
+An example of a "correct" configuration, where everything has been provided automatically (KernelEventMonitor) via DHCP.
+
+[![](../_/rsrc/1246830041720/developers/qemu/qemunusermodenetworkstacksupport.png)](qemu/qemunusermodenetworkstacksupport.png%3Fattredirects=0)
+
+**What expected:**
+
+10.0.2.2 should respond to ping (gateway firewall/dhcpd).
+10.0.2.2 should be the default route.
+10.0.2.3 should answer to DNS query.
+10.0.2.4 should answer to SMB (if available).
+10.0.2.15 is where starts the first guest ip address.
+
 **What is well known:**
-<div style="display:block">
+
 <span style="text-decoration:line-through">It seems that network hangs easily if the gateway is not pinged when network operations are needed.</span> As user inp reported on #puredarwin, adding '-no-kvm-irqchip' to the qemu call solves this issue with the rtl8139 driver.
 ### Ping workaround
 <span style="text-decoration:line-through">ping the gateway (10.0.2.2) from the guest side (PureDarwin) seems necessary at this time.</span>
 <span style="text-decoration:line-through">If it is not the done, the connection simply hangs or fails to establish sometimes.</span>
 As user inp reported on #puredarwin, adding '-no-kvm-irqchip' to the qemu call solves this issue with the rtl8139 driver.
 
-<div style="display:block">
 Depending the ping interval (-i) against the virtual gateway, the bandwith varies (a pseudo bandwith control state; qos?).
-<div style="display:block">
 Below is an example across the time, where the interval took the no value, then 0.9, 0.5, 0.1 and 0 (This example was done downloading nmap).
-<div style="display:block">
 
-<div style="display:block">
 [![](../_/rsrc/1246836722256/developers/qemu/picbd.png)](qemu/picbd.png%3Fattredirects=0)
 ### Miscellaneous
 #### Guest fingerprint (10.0.2.15)
@@ -328,10 +303,11 @@ Specifically, these patches
 They also add some other functionality that is not relevant for running Darwin.
 
 It seems that the necessary patches have made their way into QEMU 0.10, as this version doesn't need special patching any more.
+
 probono's networking experiments 12/2011
 ----------------------------------------
 The experiments are done with a "fuller" PureDarwin installation than Xmas or Nano. Above it says "everything has been provided automatically (KernelEventMonitor) via DHCP", however it doesn't do that for me (I must be missing something still). Hence I set up networking by hand, which is a bit cumbersome:
-
+<!--
 <span style="font-family:courier new,monospace">The following are my tests on Ubuntu 12/2011; probono</span>
 <span style="font-family:courier new,monospace"># qemu: pci_add_option_rom: failed to find romfile "pxe-rtl8139.bin"</span>
 <span style="font-family:courier new,monospace"># can be solved with</span>
@@ -355,12 +331,40 @@ The experiments are done with a "fuller" PureDarwin installation than Xmas or Na
 echo 'nameserver 10.0.2.3' &gt; /etc/resolver/org
 echo 'nameserver 10.0.2.3' &gt; /etc/resolver/net
 echo 'nameserver 10.0.2.3' &gt; /etc/resolver/de
-echo 'nameserver 10.0.2.3' &gt; /etc/resolver/edu
+echo 'nameserver 10.0.2.3' &gt; /etc/resolver/edu-->
+The following are my tests on Ubuntu 12/2011; probono
+```sh
+# qemu: pci_add_option_rom: failed to find romfile "pxe-rtl8139.bin"
+# can be solved with
+sudo apt-get install kvm-pxe
+# Launch qemu as root and with -redir tcp:22::22 for SSH access
+sudo qemu -hda /dev/sdc -net nic,model=rtl8139 -no-kvm-irqchip -net user -redir tcp:22::22
+# Inside qemu
+ifconfig en2 10.0.2.15 up
+ping 10.0.2.2 # works (which is the gateway provided by qemu)
+# Create /etc/rc.local with the following content to
+# bring en2 up automatically at boot time 
+#!/bin/bash
+ifconfig en2 10.0.2.15 up
+sudo route add 0.0.0.0 10.0.2.2
+# Headless SSH server inside qemu
+sudo qemu -hda /dev/sdc -net nic,model=rtl8139 -no-kvm-irqchip -net user -redir tcp:22::22 -vnc :1 -redir tcp:80::80
+# Works :-)
+# The only thing that does not work yet is DNS
+# scutil --dns # resolver #1 is empty, which is a problem -- very ugly workaround:
+echo 'nameserver 10.0.2.3' > /etc/resolver/com
+echo 'nameserver 10.0.2.3' > /etc/resolver/org
+echo 'nameserver 10.0.2.3' > /etc/resolver/net
+echo 'nameserver 10.0.2.3' > /etc/resolver/de
+echo 'nameserver 10.0.2.3' > /etc/resolver/edu
+```
+
 Rafael's networking information 01/2012
 ---------------------------------------
 Our reader Rafael writes:
 
-<span style="border-collapse:collapse;color:rgb(34,34,34)">For the network problem it's just a matter of patching kvm module and you can use full acceleration, the patch is know (qemu dev don't want it because it's specific to qemu userland software and they want kvm module to remain compatible with other userland software - which ones? ):
+<pre>
+For the network problem it's just a matter of patching kvm module and you can use full acceleration, the patch is know (qemu dev don't want it because it's specific to qemu userland software and they want kvm module to remain compatible with other userland software - which ones? ):
 Pick the latest kernel module from:
 <http://sourceforge.net/projects/kvm/files/kvm-kmod/>
 Open the x86/ioapic.c file:
@@ -373,20 +377,22 @@ to
         
 And then rtl8139 will work as well as AppleIntelE1000 from :
 svn co https://osx86drivers.svn.sourceforge.net/svnroot/osx86drivers/AppleIntelE1000/AppleIntelE1000
---&gt; but this last is derived from linux so it lacks debug specific part but I think this is the more interesting given you can redistribute it.
+--> but this last is derived from linux so it lacks debug specific part but I think this is the more interesting given you can redistribute it.
 If you use recent xnu kernel you also need to patch qemu (or use kernel patched) to tell you use apic version 14 ( qemu dev don't want ton upgrade apic version as they don't have too to run linux or windows) or you will hit an assert/kp from kernel.
 Open hw/apic.c from qemu source:
 In this function:
 static uint32_t apic_mem_readl(void *opaque, target_phys_addr_t addr)
 Change:
-        val = 0x11 | ((APIC_LVT_NB - 1) &lt;&lt; 16); /* version 0x11 */
+        val = 0x11 | ((APIC_LVT_NB - 1) << 16); /* version 0x11 */
 to
-        val = 0x14 | ((APIC_LVT_NB - 1) &lt;&lt; 16); /* version 0x14 */ 
-</span>
+        val = 0x14 | ((APIC_LVT_NB - 1) << 16); /* version 0x14 */ 
+</pre>
 Thanks Rafael for sharing this information, which is not easy to find. <span style="border-collapse:collapse;color:rgb(34,34,34);font-family:arial,sans-serif">kvm is doing really great these days.</span>
+
 QSOC project on Darwin support in QEMU
 --------------------------------------
 http://wiki.qemu.org/Google_Summer_of_Code_2012#Finish_OS_X_Virtualization_Support
+
 References
 ----------
 -   [Darwin on QEMU Forum](http://qemu-forum.ipi.fi/viewforum.php?f=13)
