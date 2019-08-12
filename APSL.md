@@ -1,6 +1,6 @@
 APSL
 ====
-Please obtain read, and make sure understand the [full text of the APSL](http://www.opensource.apple.com/license/apsl/).
+Please obtain, read, and make sure you understand the [full text of the APSL](http://www.opensource.apple.com/license/apsl/).
  For a quick first glance, here is an excerpt (emphasis added):
 
 2. (...) Apple hereby grants You, (...) a world-wide, royalty-free, non-exclusive license (...) to do the following:
