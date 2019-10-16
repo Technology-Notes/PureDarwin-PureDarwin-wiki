@@ -24,8 +24,5 @@ The `platform=ACPI kernel` flag tells the kernel to load the Platform Expert whi
     <key>IONameMatch</key>
     <string>ACPI</string>
 ```
-### Generic Platform
-Update 7/2012: 
-Reader Rafirafi sent us source code for a new kext, `ClockRTC`, and patches that make it possible to use `Apple8259PIC-6`, `AppleI386GenericPlatform-5`, `AppleI386PCI-6` with PureDarwin on generic hardware (only tested on QEMU). He thinks this will be welcome for people who are interested in running Darwin without proprietary kexts. Note, however, that this is not a full ACPI platform kext and it will likely only work on QEMU.
-    
-`GenericPlatform-1` is available on the Downloads page.
+
+See [[Generic platform kext for PureDarwin]] for alternative non-ACPI solution for Darwin 10.
