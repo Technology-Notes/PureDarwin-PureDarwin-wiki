@@ -53,7 +53,7 @@ An installer is currently being prepared.
 
 An interactive shell is run by default. In fact, `/sbin/launchd` is replaced by a shell script that runs `/bin/bash`.
 
-[[![Interactive Mode Screenshot](https://sites.google.com/a/puredarwin.org/puredarwin/_/rsrc/1234090957898/downloads/puredarwin-nano/bash%20interactive%20mode%20in%20nano.png)](https://sites.google.com/a/puredarwin.org/puredarwin/downloads/puredarwin-nano/bash%20interactive%20mode%20in%20nano.png?attredirects=0)
+[![Interactive Mode Screenshot](https://sites.google.com/a/puredarwin.org/puredarwin/_/rsrc/1234090957898/downloads/puredarwin-nano/bash%20interactive%20mode%20in%20nano.png)](https://sites.google.com/a/puredarwin.org/puredarwin/downloads/puredarwin-nano/bash%20interactive%20mode%20in%20nano.png?attredirects=0)
 
 The Z shell (zsh) is also usable as an interactive UNIX command interpreter (shell).
 
