@@ -121,7 +121,7 @@ Installation
 ### From Git
 
 ```
-git clone https://github.com/PureDarwin/darwinbuild.git
+git clone --depth 1 https://github.com/PureDarwin/darwinbuild.git
 ```
 
 ### Generic Instructions (after getting darwinbuild source)
